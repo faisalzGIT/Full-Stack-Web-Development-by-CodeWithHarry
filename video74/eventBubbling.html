@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                .container {
+                        width: 80vw;
+                        height: 30vh;
+                        border: 1px solid blue;
+                        background-color: red;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                }
+
+                .chcont {
+                        width: 60vw;
+                        height: 20vh;
+                        border: 1px solid rebeccapurple;
+                        background-color: gray;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                }
+
+                .childcont {
+                        width: 40vw;
+                        height: 10vh;
+                        border: 1px solid forestgreen;
+                        background-color: darkgoldenrod;
+                }
+        </style>
+</head>
+
+<body>
+        <div class="container">
+                <section class="chcont">
+                        <div class="childcont"></div>
+                </section>
+        </div>
+
+
+</body>
+
+<script>
+        document.querySelector(".childcont").addEventListener("click", (e) => {
+                e.stopPropagation();
+                alert("childcont clicked");
+        })
+        document.querySelector(".chcont").addEventListener("click", (e) => {
+                e.stopPropagation();
+                alert("chcont clicked");
+        })
+        document.querySelector(".container").addEventListener("click", (e) => {
+                e.stopPropagation();
+                alert("container clicked");
+                console.log(e.type) // for checking event type
+                console.log(e.currentTarget) // Elemnt that handled the event
+                console.log(e.clientX)//co-ordinates of  the cursor at x
+                console.log(e.clientY)//co-ordinates of  the cursor at y
+
+
+        })
+
+        // aNOTHER WAY FOR EVENT HANDLING
+        // document.querySelector(".childcont").onclick = function(click){
+        //         e.stopPropagation();
+        //         alert("childcont clicked");
+        // }
+
+
+        function getRandomColor() {
+                let val1 = Math.ceil(0 + Math.random() * 255);
+                let val2 = Math.ceil(0 + Math.random() * 255);
+                let val3 = Math.ceil(0 + Math.random() * 255);
+                return `rgb(${val1}, ${val2}, ${val3})`
+        }
+
+        // setInterval()
+        let a = setInterval(() => {
+                document.querySelector(".chcont").style.backgroundColor = getRandomColor();
+        }, 1000);
+        console.log(a)
+        // we can use "clearInterval(here comes whatever integer "concole.log(a)" returns)"
+
+
+        let b = setTimeout(() => {
+                document.querySelector(".childcont").style.backgroundColor = getRandomColor();
+        }, 3000);
+        console.log(b)
+        // we can use "clearTimeout(here comes whatever integer "concole.log(b)" returns)"
+
+
+        document.addEventListener()
+</script>
+
+</html>

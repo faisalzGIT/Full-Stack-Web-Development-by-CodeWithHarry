@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        body{
+            background-color: darkgreen;
+        }
+        .container{
+            background-color: antiquewhite;
+            width:50vw;
+            height: 40vh;
+        }
+        .box{
+            background-color: aquamarine;
+            width: 5vw;
+            height: 4vh;
+
+            /* 4 IMP properties of Transition */
+            /* transition-property:transform, background-color;
+            transition-duration:3s;
+            transition-timing-function:ease-in-out;
+            transition-delay:1s; */
+
+            /* All 4 properties in ONE */
+            transition: transform 3s ease-in-out 1s, background-color 3s ease-in-out 1s;
+        }
+        .translate{
+            transform: translateX(10vw) translateY(10vh) scale(2);
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate">
+
+        </div>
+    </div>
+</body>
+</html>

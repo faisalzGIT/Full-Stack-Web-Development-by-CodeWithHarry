@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID-1</title>
+    <style>
+        .container{
+            width: 90vw;
+            height:90vh;
+            border:2px solid black;
+            display: grid;
+            /* grid-template-columns: [pehla]125px [doosra]100px [endlineKaNam]; */
+            /* grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: 1fr 1fr 1fr ;
+            grid-template-rows: 150px 150px ; */
+            /* grid-template-columns:repeat(4,1fr); */
+            grid-template-columns:repeat(4,80px);
+            grid-template-rows:repeat(2,80px);
+            /* justify-content: center; */
+            place-content: center;
+            /* align-content: center;  */
+
+            /* place-content:center means both justify content and align content will be centered  */
+            gap: 14px;
+            /* row-gap:10px;
+            column-gap:15px; */
+            /* grid-template-rows:1fr 1fr 1fr; */
+            justify-items: center;
+            align-items: center;
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+        .item-4{
+            /* grid-row: 1/2; */
+            /* Or use this
+            grid-row-start: 1;
+            grid-row-end: 2; */
+            /* grid-column: pehla/doosra */
+        }
+        .item-1{
+            /* align-self: end; */
+            /* grid-row: 2/3;
+            grid-column: pehla/doosra; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5<a/div>
+    </div>
+</body>
+</html>

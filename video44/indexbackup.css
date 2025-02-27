@@ -1,0 +1,169 @@
+body {
+    font-family: 'Segoe UI';
+}
+
+main {
+    width: 74vw;
+    position: relative;
+    left: 13vw;
+    margin-top: 70px;
+}
+
+.main2 {
+    display: grid;
+    grid-template-columns: 310px 310px 310px ;
+    gap: 30px;
+    justify-content: center;
+    
+}
+
+nav {
+    gap: 240px;
+    color: rgb(98, 96, 96);
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo1>img {
+    width: 180px;
+}
+
+.right>ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.right>ul>li {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.submain {
+    display: flex;
+    justify-content: center;
+}
+
+.submain1>h1 {
+    font-weight: 400;
+    font-size: 47px;
+    margin-bottom: 15px;
+
+}
+
+.submain2>h3 {
+    font-weight: 300;
+    font-size: 24px;
+    font-weight: 400;
+    width: 62vw;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.submain3>a {
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: #05b8d3;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.submain3>a:hover {
+    background-color: #029fb8;
+    transition-duration: .2s;
+}
+
+.submain4 {
+    margin: 90px;
+    margin-bottom: 10px;
+    gap: 15px;
+    display: flex;
+    justify-content: start;
+}
+
+.submain4>h3 {
+    padding: 10px;
+    font-size: 24px;
+    position: relative;
+    bottom: 30px;
+    font-weight: 350;
+}
+
+.submain4>h3>small {
+    font-weight: 00;
+    font-size: 15px;
+}
+
+.submain4>h3>small>a {
+    text-decoration: none;
+    color: black;
+}
+
+.submain4>img {
+
+    width: 60px;
+    height: 60px;
+}
+
+.languagebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 60px;
+    width: 300px;
+    height: 150px;
+    border-radius: 4px;
+    background-color: #80808012;
+}
+
+.english>div>a {
+    position: relative;
+    top: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.duadownload1 {
+    display: flex;
+    font-size: 12px;
+    gap: 20px;
+}
+
+.bitdownloadsize {
+    width: 115px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin: 0px;
+}
+
+.bit32color:hover{
+    background-color: #00a4be;
+    transition:0.2s;
+}
+.bit64color:hover{
+    background-color: #57a957;
+    transition: 0.2s;
+}
+
+.bitdownloadsize>a{
+    text-decoration:none;
+    color: white;
+}
+
+.bit32color {
+    background-color: #00b6d1;
+}
+
+.bit64color{
+    background-color:#5cb85c;
+}

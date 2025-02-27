@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        img {
+            /* filter: blur(8px); */
+        }
+
+        .img1 {
+            filter: contrast(30%) brightness(150%);
+        }
+        .img2 {
+            filter: drop-shadow(16px 16px 20px red) invert(75%);
+        }
+        .img3 {
+            filter: opacity(25%); 
+            filter: contrast(80%) brightness(166%);
+            /* <filter-function> values */
+            /*
+            filter: blur(5px);
+            filter: brightness(0.4);
+            filter: contrast(200%);
+            filter: drop-shadow(16px 16px 20px blue);
+            filter: grayscale(50%);
+            filter: hue-rotate(90deg);
+            filter: invert(75%);
+            filter: opacity(25%);
+            filter: saturate(30%);
+            filter: sepia(60%); 
+            */
+        }
+        .img4{
+            filter: drop-shadow(16px 16px 20px blue);
+            height: 400px;    
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="img1" src="https://static.addtoany.com/images/dracaena-cinnabari.jpg" alt="">
+        <hr>
+        <img class="img2"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrTFrhr_-pYR74jUgOy7IerAoHAX3zPIZZcg&usqp=CAU"
+            alt="">
+        <hr>
+        <img class="img3"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFSWENYb5tWlkicILBQIMHa95B_Ah-gJ1xIg&usqp=CAU"
+            alt="">
+        <hr>
+        <img class="img4"
+            src="https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg"
+            alt="">
+    </div>
+</body>
+
+</html>

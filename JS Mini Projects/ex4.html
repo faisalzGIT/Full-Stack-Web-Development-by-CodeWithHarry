@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex.4</title>
+	
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+		body{ 
+			background-image: url(bcImage.jpg);
+			background-size: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: start;
+			flex-direction: column;
+			height: 100vh;
+			margin:0;
+			color: black;
+			font-family: "Nunito", sans-serif;
+			font-weight: 600;
+		}
+		#Time{
+			font-size: 78px;
+			margin-left: 180px;
+			display:flex;
+			align-content: center;
+		}
+		
+		#Date{
+			font-size: 33px;
+			margin-left: 252px;
+			display: block;
+			align-content: center;
+		}
+	</style>
+</head>
+<body>
+		<div id="Time"></div>
+		<div id="Date"></div>
+</body>
+<script>
+	/*
+	Create a digital seconds clock using setInterval and Date object in JS
+	The Date object can be used to get the date, time, hours, and seconds which can then be   
+	updated using setInterval.Try to keep the UI good looking
+	*/
+	
+	
+		let a = new Date();
+	
+		let date = a.getDate();		
+		let month = (a.getMonth() + 1);
+		let yr = a.getFullYear();
+
+		date = date.toString().padStart(2, "0");
+		month = month.toString().padStart(2, "0");
+	
+		let tarikh = document.getElementById("Date");
+		tarikh.innerHTML = `${date}/${month}/${yr}`;
+	
+		
+	setInterval(() => {
+		
+		let currentTime = new Date();
+		let h = currentTime.getHours();
+		let m = currentTime.getMinutes();
+		let s = currentTime.getSeconds();
+		
+		h = h.toString().padStart(2, "0");
+		m = m.toString().padStart(2, "0");
+		s = s.toString().padStart(2, "0");
+		
+		let waqt = document.getElementById("Time");
+		waqt.innerHTML = `${h}:${m}:${s}`;
+		// console.log(` ${h}:${m}:${s}`);
+
+	}, 1000);
+
+</script>
+
+</html>
+

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body{
+	font-family: "Nunito", sans-serif;
+    background-color:rgb(170, 102, 102);
+}
+
+#form1 {
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 13px;
+}
+
+#form1>h1 {
+    font-size: 60px;
+    margin: 7px;
+	text-shadow: 3px 5px 6px rgba(0, 0, 0, 0.9);
+}
+
+#form1 input {
+	width: 220px;
+	height: 23px;
+	border-radius: 5px;
+	background-color: #e1d4d4;
+
+}
+
+#form1>button {
+	width: 70px;
+	height: 27px;
+	border-radius: 3px;
+	background-color: #e1d4d4;
+
+}
+
+nav {
+	display: flex;
+	color: antiquewhite;
+	background-color: rgb(125, 24, 24);
+	border-radius: 5px;
+
+}
+
+nav div {
+	font-size: 25px;
+	display: flex;
+	margin: 10px;
+	gap: 20px;
+}
+
+/* Already added todo list items ke liye css */
+
+#addedTodoList{
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+
+}
+
+#addedTodoList > h2{
+	font-size: 35px;
+}
+
+#addedTodoList > ol{
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+#addedTodoList > ol li {
+	width: 50vw;
+	display:flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 20px;
+	border: 1px black solid;
+	border-radius: 10px;
+	background-color: #c9b2b2;
+}
+
+.forTodoTitle{
+	font-weight: 700;
+}
+
+#addedTodoList > ol li button{
+	width: 15 0px;
+	height: 30px;
+	background-color:rgb(187, 149, 149);
+	border-radius: 3px;
+}
+
+
+
+.nullKaSoln {
+	font-size: 20px;
+	font-weight: 100;
+	color: black;
+}

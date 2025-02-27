@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors and more</title>
+    <style>
+        /* ELEMENT SELECTOR */
+        div {
+            background-color: rgb(138, 138, 248);
+        }
+
+        /* CLASS SELECTOR */
+        .red {
+            background-color: red;
+        }
+
+        /* ID SELECTOR */
+        #green {
+            background-color: rgb(21, 231, 87)
+        }
+        /* CHILD SELECTOR */
+        /*here it means the p which is in div will be edited */
+        div>p {
+            background-color: rgb(221, 139, 139);
+            color: rgb(123, 12, 12);
+        }
+        #for2ndSpan{
+            background-color: antiquewhite;
+        }
+        /* DESCENDENT SELECTOR */
+        /* here it means the p which is wherever in the span inside any other element in span will be edited */
+        span p{
+            color: red;
+            background-color:cyan;
+        }
+        /* UNIVERSAL SELECTOR */
+        /* it apllies properties to every single element present in the web page */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* FIRST CHILD SELECTOR */
+        /* this means wherever p is first child, anywhere just edit it */
+        p:first-child{
+            background-color:cornflowerblue;
+        }
+
+        
+        /* PSEUDO SELECTOR */
+        
+        /* link will be shown in this color after visiting */
+        a:visited{
+            color: rgb(195, 195, 15);
+        }
+
+        /* Before Opening link will be shown in this color  */
+        a:link{
+            color: rgb(255, 47, 193);
+        }
+        
+        /* when the link is clicked the background color of that link will be shown red */
+        a:active{
+            background-color: red;
+        }
+        
+        /* whenever u will hover on the link thelink color wil go to yellow */
+        a:hover{
+            background-color: yellow;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- this div is used for element selector and child selector  -->
+    <div>This is a div<p>This is a para in div</p>
+    </div>
+    <!-- this span is used for class Selector -->
+    <span class="red">This is a Span</span>
+    <!-- this h3 is used for id selector -->
+    <h3 id="green">This is heading type 3</h3>
+    <!-- this span is used for descendant selector -->
+    <span id="for2ndSpan">2nd span
+        <article>
+            <div></div>
+            <p>this is a p under article under 2nd span</p>
+        </article>
+    </span>
+    <!-- this main is used for first child selector -->
+    <main class="one">
+        <p>this is first child</p>
+        <p>this is second child</p>
+    </main>
+    <!-- this anchor tag is used for PSEUDO selectors -->
+    <a href="https://www.google.com">GO to google</a><br>
+    <a href="https://www.w3schools.com">Open w3schools</a>
+
+</body>
+
+</html>

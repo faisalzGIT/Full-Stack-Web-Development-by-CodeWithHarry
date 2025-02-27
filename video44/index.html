@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+
+        main {
+            width: 74vw;
+            position: relative;
+            left: 13vw;
+            margin-top:  70px;
+        }
+
+        .main2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            gap: 25px;
+            justify-content: center;
+            margin: auto;
+        }
+
+        nav {
+            gap: 240px;
+            color: rgb(98, 96, 96);
+            margin: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .logo1>img {
+            width: 180px;
+        }
+
+        .right>ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .right>ul>li {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .submain {
+            display: flex;
+            justify-content: center;
+        }
+
+        .submain1>h1 {
+            font-weight: 400;
+            font-size: 47px;
+            margin-bottom: 15px;
+
+        }
+
+        .submain2>h3 {
+            font-weight: 300;
+            font-size: 24px;
+            font-weight: 400;
+            width: 62vw;
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+        .submain3>a {
+            font-size: 14px;
+            border-radius: 6px;
+            padding: 15px;
+            background-color: #05b8d3;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+        }
+
+        .submain3>a:hover {
+            background-color: #029fb8;
+            transition-duration: .2s;
+        }
+
+        .submain4 {
+            margin: 90px;
+            margin-bottom: 10px;
+            gap: 15px;
+            display: flex;
+            justify-content: start;
+        }
+
+        .submain4>h3 {
+            padding: 10px;
+            font-size: 24px;
+            position: relative;
+            bottom: 30px;
+            font-weight: 350;
+        }
+
+        .submain4>h3>small {
+            font-weight: 00;
+            font-size: 15px;
+        }
+
+        .submain4>h3>small>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .submain4>img {
+
+            width: 60px;
+            height: 60px;
+        }
+
+        .languagebox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            gap: 60px;
+            width: 300px;
+            height: 150px;
+            border-radius: 4px;
+            background-color: #80808012;
+        }
+
+        .english>div>a {
+            position: relative;
+            top: 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .duadownload1 {
+            display: flex;
+            font-size: 12px;
+            gap: 20px;
+        }
+
+        .bitdownloadsize {
+            width: 115px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            margin: 0px;
+        }
+
+        .bit32color:hover{
+            background-color: #00a4be;
+            transition:0.2s;
+        }
+        .bit64color:hover{
+            background-color: #57a957;
+            transition: 0.2s;
+        }
+        
+        .bitdownloadsize>a{
+            text-decoration:none;
+            color: white;
+        }
+
+        .bit32color {
+            background-color: #00b6d1;
+        }
+
+        .bit64color{
+            background-color:#5cb85c;
+        }
+        @keyframes newer {
+            from{
+                
+            }
+            to{
+                transform:translateX(140px);
+            }
+        }
+        
+        @media screen and (max-width:900px){
+            .main2{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+                animation: newer 1s ease 1 forwards;
+            }
+            
+            
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo1">
+                <img src="logo1.webp" alt="">
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Products<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#141B34"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>Pricing<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#141B34"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li>Resources<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#141B34"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li>About us<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#141B34"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt=""></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main main1">
+            <div class="submain1 submain">
+                <h1>Download <strong>UltraEdit</strong> for Windows
+                    <a href="https://www.g2.com/products/ultraedit/reviews" target="__blank" rel="noopener"><img
+                            decoding="async" src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png"
+                            width="112" height="32" alt="Reviews"
+                            class="wp-image-1613 alignnone size-full entered lazyloaded"
+                            data-lazy-src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png"
+                            data-ll-status="loaded"><noscript><img decoding="async"
+                                src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" width="112"
+                                height="32" alt="Reviews" class="wp-image-1613 alignnone size-full" /></noscript></a>
+                </h1>
+            </div>
+            <div class="submain2 submain">
+                <h3>
+                    Download and try UltraEdit before you buy it! This download includes the full Windows version of the
+                    text editor.
+                </h3>
+            </div>
+            <div class="submain3 submain">
+                <a href="https://www.ultraedit.com/downloads/uex-thank-you">DOWNLOAD MAC OR LINUX VERSION</a>
+            </div>
+            <div class="submain4 submain">
+                <img src="logo2.jpeg" alt="">
+                <h3>Download UltraEdit
+                    <small>v2023.2(released 12/15/2023) | <a href="/updates/uehotfix/">Hotfix</a></small>
+                </h3>
+            </div>
+        </div>
+        <div class="main main2">
+            <div class="english languagebox">
+                <div class="editorlanguade">
+                    <a href="">English</a>
+                </div>
+                <div class="duadownload1">
+                    <div class="bitdownloadsize bit32color englishdownload1">
+                        <a href="ue_english.exe">
+                            <h4>Download 32-bit</h4>
+                        </a>
+                    </div>
+                    <div class="bitdownloadsize bit64color englishdownload2">
+                        <a href="ue_english_64.exe">
+                            <h4>Download 64-bit</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="english languagebox">
+                <div class="editorlanguade">
+                    <a href="">English</a>
+                </div>
+                <div class="duadownload1">
+                    <div class="bitdownloadsize bit32color englishdownload1">
+                        <a href="ue_english.exe">
+                            <h4>Download 32-bit</h4>
+                        </a>
+                    </div>
+                    <div class="bitdownloadsize bit64color englishdownload2">
+                        <a href="ue_english_64.exe">
+                            <h4>Download 64-bit</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="english languagebox">
+                <div class="editorlanguade">
+                    <a href="">English</a>
+                </div>
+                <div class="duadownload1">
+                    <div class="bitdownloadsize bit32color englishdownload1">
+                        <a href="ue_english.exe">
+                            <h4>Download 32-bit</h4>
+                        </a>
+                    </div>
+                    <div class="bitdownloadsize bit64color englishdownload2">
+                        <a href="ue_english_64.exe">
+                            <h4>Download 64-bit</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="english languagebox">
+                <div class="editorlanguade">
+                    <a href="">English</a>
+                </div>
+                <div class="duadownload1">
+                    <div class="bitdownloadsize bit32color englishdownload1">
+                        <a href="ue_english.exe">
+                            <h4>Download 32-bit</h4>
+                        </a>
+                    </div>
+                    <div class="bitdownloadsize bit64color englishdownload2">
+                        <a href="ue_english_64.exe">
+                            <h4>Download 64-bit</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="english languagebox">
+                <div class="editorlanguade">
+                    <a href="">English</a>
+                </div>
+                <div class="duadownload1">
+                    <div class="bitdownloadsize bit32color englishdownload1">
+                        <a href="ue_english.exe">
+                            <h4>Download 32-bit</h4>
+                        </a>
+                    </div>
+                    <div class="bitdownloadsize bit64color englishdownload2">
+                        <a href="ue_english_64.exe">
+                            <h4>Download 64-bit</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="english languagebox">
+                <div class="editorlanguade">
+                    <a href="">English</a>
+                </div>
+                <div class="duadownload1">
+                    <div class="bitdownloadsize bit32color englishdownload1">
+                        <a href="ue_english.exe">
+                            <h4>Download 32-bit</h4>
+                        </a>
+                    </div>
+                    <div class="bitdownloadsize bit64color englishdownload2">
+                        <a href="ue_english_64.exe">
+                            <h4>Download 64-bit</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="english languagebox">
+                <div class="editorlanguade">
+                    <a href="">English</a>
+                </div>
+                <div class="duadownload1">
+                    <div class="bitdownloadsize bit32color englishdownload1">
+                        <a href="ue_english.exe">
+                            <h4>Download 32-bit</h4>
+                        </a>
+                    </div>
+                    <div class="bitdownloadsize bit64color englishdownload2">
+                        <a href="ue_english_64.exe">
+                            <h4>Download 64-bit</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="english languagebox">
+                <div class="editorlanguade">
+                    <a href="">English</a>
+                </div>
+                <div class="duadownload1">
+                    <div class="bitdownloadsize bit32color englishdownload1">
+                        <a href="ue_english.exe">
+                            <h4>Download 32-bit</h4>
+                        </a>
+                    </div>
+                    <div class="bitdownloadsize bit64color englishdownload2">
+                        <a href="ue_english_64.exe">
+                            <h4>Download 64-bit</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="english languagebox">
+                <div class="editorlanguade">
+                    <a href="">English</a>
+                </div>
+                <div class="duadownload1">
+                    <div class="bitdownloadsize bit32color englishdownload1">
+                        <a href="ue_english.exe">
+                            <h4>Download 32-bit</h4>
+                        </a>
+                    </div>
+                    <div class="bitdownloadsize bit64color englishdownload2">
+                        <a href="ue_english_64.exe">
+                            <h4>Download 64-bit</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="english languagebox">
+                <div class="editorlanguade">
+                    <a href="">English</a>
+                </div>
+                <div class="duadownload1">
+                    <div class="bitdownloadsize bit32color englishdownload1">
+                        <a href="ue_english.exe">
+                            <h4>Download 32-bit</h4>
+                        </a>
+                    </div>
+                    <div class="bitdownloadsize bit64color englishdownload2">
+                        <a href="ue_english_64.exe">
+                            <h4>Download 64-bit</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+
+</html>

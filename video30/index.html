@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        :root{
+            --color:rgb(116, 56, 7);
+            --secc:rgb(235, 180, 135);
+            --anothercolor:rgb(255, 197, 251);
+            --defpad:30px;
+            --defop:0.4;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navc{
+            background-color: var(--color);
+            color: var(--anothercolor);
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+            padding:var(--defpad);  
+        }
+        .para{
+            opacity: var(--defop);
+            background-color: var(--secc);
+        }
+    </style>
+</head>
+<body>
+    <div class="navc">
+        <ul>
+            <li>Home</li>
+            <li>contact</li>
+            <li>About</li>
+        </ul>
+    </div>
+    <div class="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam quia doloremque quos officia repudiandae dolore porro incidunt illo, laborum magni alias aliquam nisi earum quaerat sequi accusantium laudantium impedit ducimus minima. Provident temporibus totam accusantium a ex assumenda alias tempora, ullam voluptatem, voluptates nisi blanditiis.
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercise 3</title>
+	<style>
+		body {
+			background-color: rgb(151, 148, 148);
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<marquee behavior="" direction="" style="color: red;">Alhamdulillah</marquee>
+</body>
+<script>
+	let jokeStation = document.createElement("div");
+	jokeStation.id = "jokeStationKiId";
+	document.body.appendChild(jokeStation);
+	
+	
+	const jokes = [
+		"Why don't scientists trust atoms? Because they make up everything!",
+		"Why did the bicycle fall over? It was two-tired!",
+		"What do you call fake spaghetti? An impasta!",
+		"Why don't skeletons fight each other? They don't have the guts!",
+		"What did the grape do when it got stepped on? Nothing, it just let out a little wine!",
+		"Why don't some couples go to the gym? Because some relationships don't work out!",
+		"I'm reading a book on anti-gravity. It's impossible to put down!",
+		"Why did the scarecrow win an award? Because he was outstanding in his field!",
+		"What did the ocean say to the beach? Nothing, it just waved!",
+		"Why are elevator jokes so good? They work on many levels!",
+		"Why did the math book look sad? Because it had too many problems!"
+	];
+
+	console.log(jokes[1]);
+	
+	function randomNumb(){
+		return Math.floor((Math.random() * 11));
+	}
+
+	function jokeMaker(){
+		document.getElementById("jokeStationKiId").innerHTML = jokes[randomNumb()];
+	}
+
+	jokeMaker();
+</script>
+
+</html>

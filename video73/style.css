@@ -1,0 +1,101 @@
+/* body{
+    background-color: rgb(94, 89, 89);
+} */
+
+.container{
+    margin: auto;
+    padding: 40px;
+    width: 60vw;
+    height: 100vw;
+    border: 2px solid grey;
+    /* display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px; */
+}
+
+.box{
+    margin: auto;
+    width: 50vw;
+    height: 100px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    height: 130px;
+    width: 50vw;
+    margin: 30px auto;
+    border: 2px solid yellow;
+    border-radius: 8px;
+    background-color: black;
+}
+
+.thumb{
+    width: 200px;
+    position: relative;
+}
+
+.duration{
+    position: absolute;
+    z-index: 11;
+    background-color: #000000bb;
+    top: 91px;
+    left: 142px;
+    color: white;
+    font-weight: 500;
+    width: 41px;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.thumb img{
+    position: absolute;
+    margin: 18px;
+    border-radius: 5px;
+    width: 170px;
+}
+
+
+.right{
+    left: 181px;
+    position: relative;
+    height: 95px;
+    width: 556px;
+    margin: 18px;
+}
+
+.title{
+    color:white;
+    font-family: "roboto";
+    font-weight: 500;
+    font-size: 16px;
+    height: 19px;
+    overflow:hidden;   
+    margin-bottom: 10px; 
+}
+
+.cname{
+    display: inline-block;
+    color: rgb(224, 222, 222);
+    font-weight: 400;
+    font-size: 13px;
+    font-family: roboto;
+}
+
+.views{
+    display: inline-block;
+    color: rgb(224, 222, 222);
+    font-weight: 400;
+    font-size: 13px;
+    font-family: roboto;
+}
+
+.months{
+    display: inline-block;
+    color: rgb(224, 222, 222);
+    font-weight: 400;
+    font-size: 13px;
+    font-family: roboto;   
+}

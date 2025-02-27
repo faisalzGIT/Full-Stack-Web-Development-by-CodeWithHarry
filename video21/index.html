@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity & Cascade</title>
+    <style>
+        /* specificity is highest */
+        /* h1 {
+            color: darkmagenta !important;
+        } */
+
+        /* specificity is 1 */
+        h1 {
+            color: rgb(177, 56, 177);
+        }
+
+        /* specificity is 1+10=11   */
+        h1.newclass {
+            color: red;
+        }
+
+        /* specificity is 10 */
+        [data-x=a] {
+            color: aliceblue;
+        }
+
+        /* specificity is 10 */
+        .netsa{
+            color: maroon;
+        }
+
+        /* specificity is 10 */
+        .anotherOne{
+            color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 data-x="a" class="anotherOne newclass netsa">Hi i am first class</h1>
+
+
+    <!-- Specificity Calculation
+    To calculate specificity, assign a value to each part of the selector:
+
+    1. Universal Selector: 0
+    2. Element selectors and pseudo-elements: 1
+    3. Class selectors, attribute selectors, and pseudo-classes: 10
+    4. ID selectors: 100
+    5. Inline styles: 1000
+        Then, add up the values of all the parts in the selector.
+
+Here is an example 
+    <h1 id="title" class="h1">CodeWithHarry</h1>
+Here, the specificity value will be 111 because ID has a specificity of 100, the class has a specificity of 10, and the h1 element has a specificity of 1.
+In the case of a specificity tie, the rule that appears last in the CSS is applied. -->
+</body>
+
+</html>

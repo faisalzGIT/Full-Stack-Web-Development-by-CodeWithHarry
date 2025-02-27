@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Snake water gun</title>
+	<style>
+		body{
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<marquee behavior="" direction="" style="color: red;">Alhamdulillah</marquee>
+
+	<button id="button_hai">Play the Game</button>
+</body>
+<script>
+	
+	/*
+	1)Take input from player(S,G,W)
+	2)generate random answer(s/w/g) from three for competing with the player 
+	3)compare two inputs and declare who is the winner in this game
+	*/
+
+	
+	function checkWhoWins(playerKiChal, convtd_computerKiChal){   //9
+		if(playerKiChal == convtd_computerKiChal){
+			console.log('Match DRAW');
+			return;
+		} else if(playerKiChal == "s" && convtd_computerKiChal == "g"){
+			console.log('Computer Won!!  you lost');
+			return;
+		} else if(playerKiChal == "s" && convtd_computerKiChal == "w"){
+			console.log('You won!! computer lost');
+			return;
+		} else if(playerKiChal == "g" && convtd_computerKiChal == "s"){
+			console.log('You won!! computer lost');
+			return;
+		} else if(playerKiChal == "g" && convtd_computerKiChal == "w"){
+			console.log('Computer Won!!  you lost');          
+			return;
+		} else if(playerKiChal == "w" && convtd_computerKiChal == "g"){
+			console.log('You won!! computer lost');
+			return;
+		} else{
+			console.log('Computer Won!!  you lost');          
+			return;
+		}
+	}
+
+	function compChalConv(computerKiChal){                        //7
+		if(computerKiChal == 1){
+			return "s";
+		} else if(computerKiChal == 2){
+			return "g";
+		} else{
+			return "w";
+		}
+	}
+	
+	function InputfromComputer(){                                  //5
+		return Math.floor((Math.random() * 3) + 1);
+	}
+
+	function takeInputFromPlayer(){                                //3
+		let playerKiChal = prompt("Enter s or g or w");
+		let computerKiChal = InputfromComputer();                  //4
+		let convtd_computerKiChal = compChalConv(computerKiChal);  //6
+		console.log("Player ki chall: " + playerKiChal);
+		console.log("comp ki chal: " + convtd_computerKiChal);
+		checkWhoWins(playerKiChal, convtd_computerKiChal);         //8
+	}
+	
+	const merabutton = document.getElementById("button_hai");     //1
+	merabutton.addEventListener("click", takeInputFromPlayer);  //2
+	
+</script>
+</html>
+

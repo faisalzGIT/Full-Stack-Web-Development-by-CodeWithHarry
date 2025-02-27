@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Employee Data</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgb(129, 107, 129);
+        }
+
+        #generateBtn {
+            color: white;
+            background-color: #28A745;
+            height: 55px;
+            width: 160px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #generateBtn:hover {
+            background-color: darkolivegreen;
+            transform: scale(1.05);
+        }
+
+        #generateBtn:active {
+            background-color: seagreen;
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="generateBtn">Generate Data</button>
+
+
+    <script>
+        document.getElementById("generateBtn").addEventListener("click", async () => {
+            try {
+                const response = await fetch("http://localhost:3000/generate", { method: "POST" });
+                const data = await response.json();
+                alert(data.message);
+                console.log(data.employees);
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        });
+    </script>
+</body>
+
+</html>

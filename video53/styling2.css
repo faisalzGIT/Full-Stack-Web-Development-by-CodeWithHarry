@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url(assets/images/bg.jpg);
+    background-size: max(1200px, 100vw);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    top: 0px;
+}
+
+.box {
+    height: 90vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    /*Responsive*/
+    width: 90vw;
+    gap: 600px;
+    /*Responsive*/
+    margin: auto;
+}
+
+.rside {
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    gap: 23px;
+
+}
+
+.logosvg {
+    z-index: 11;
+}
+
+.logosvg img {
+    width: 150px;
+}
+
+
+#language_select {
+    /* Set the height to accommodate the SVG */
+    height: 33px;
+    /* Adjust as needed */
+    /* Set a background color if desired */
+    background-color: white;
+    /* Adjust as needed */
+    /* Add padding to ensure space around the SVG */
+    padding-left: 29px;
+    /* Adjust as needed */
+    padding-right: 10px;
+    /* Define the background image */
+    background-image: url(assets/language.svg);
+    /* Position the background image */
+    background-position: 8px center;
+    /* Specify background repeat behavior */
+    background-repeat: no-repeat;
+    /* Ensure the text doesn't overlap with the background */
+    filter: invert(1);
+    font-size: 16px;
+    font-weight: 600;
+    width: 120px;
+    border-radius: 4px;
+}
+
+.signin {
+    background-color: red;
+    /* height: 33px; */
+    border: none;
+    border-radius: 4px;
+    width: 75px;
+    text-align: center;
+    padding: 4px;
+    font-weight: 600;
+    color: white;
+}
+
+
+.main_content {
+    width: 70%;
+    height: 50vh;
+    z-index: 11;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    gap: 12px;
+    padding: 100px;
+}
+
+.f1 {
+    z-index: 11;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.f2 {
+    z-index: 11;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.f3 {
+    z-index: 11;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.email_get_started {
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.email_get_started>input {
+    background-color: rgba(23, 23, 23, 0.61);
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 4px;
+    padding: 10px;
+    padding-right: 25px;
+    width: 300px;
+    border: 1px solid grey;
+}
+
+.email_get_started button {
+    background-color: #e50914;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separation {
+    height: 7px;
+    background-color: #232323;
+    width: 100%;
+}
+
+.content_sections_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 160px;
+    margin: auto;
+}
+
+.content_sections_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 160px;
+    margin: auto;
+}
+
+.content_sections_3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 160px;
+    margin: auto;
+}
+
+.content_sections_4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 160px;
+    margin: auto;
+}
+
+.text {
+    color: white;
+}
+
+.t1 {
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.t2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.text_content {
+    width: 50%;
+}
+
+.media_content_3 {
+    position: relative;
+}
+
+.media_content_1 img {
+    width: 500px;
+}
+
+.media_content_2 img {
+    width: 550px;
+}
+
+.media_content_3 img {
+    width: 550px;
+    position: relative;
+    z-index: 12;
+}
+
+.media_content_3 video {
+    position: absolute;
+    left: 92px;
+    top: 27px;
+    width: 354px;
+}
+
+.media_content_4 img {
+    width: 550px;
+}
+
+
+.last_2nd {
+    width: 70vw;
+    margin: auto;
+    padding: 80px 10px;
+    color: white;
+
+}
+
+.last_2nd .mainfaq {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.last_2nd .faq_sec .fa_que {
+    background-color: #2d2d2d;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.r_towatch {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.last_one {
+    width: 80vw;
+    padding: 55px 0px;
+    padding-left: 145px;
+}
+
+.last_one .que_call {
+    color: white;
+}
+
+.que_call {
+    padding-bottom: 20px;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.links a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.end {
+    color: #e8e6e1;
+    padding-top: 20px;
+}
+
+
+@media screen and (max-width:650px) {
+    .main {
+        height: 50vh;
+        background-size: 1000px;
+    }
+
+    nav {
+        gap: 140px;
+        height: 80px;
+    }
+
+    #language_select {
+        width: 55px;
+
+    }
+
+    .box {
+        height: 50vh;
+
+    }
+
+    .rside {
+        gap: 10px;
+    }
+
+    .main_content {
+        padding: 0px 19px;
+        width: 90%;
+        height: 40vh;
+    }
+
+    .email_get_started {
+        flex-direction: column;
+        align-items: center;
+        gap: 9px;
+    }
+
+    .email_get_started button {
+        font-size: 18px;
+    }
+
+    .logosvg img {
+        width: 90px;
+    }
+
+    .f1 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .f2 {
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    .f3 {
+        font-size: 16px;
+        font-weight: 400;
+        width: 90%;
+        margin: 0px auto;
+    }
+
+
+    .content_sections_1 {
+        flex-direction: column;
+    }
+
+    .text_content {
+        width: 350%;
+        text-align: center;
+    }
+
+    .content_sections_2 {
+        flex-direction: column-reverse;
+    }
+
+    .media_content_2 img {
+        width: 424px;
+    }
+
+    .content_sections_3 {
+        flex-direction: column;
+    }
+
+    .media_content_3 img {
+        width: 424px;
+    }
+   
+    .media_content_3 video {
+        width: 252px;
+    }
+
+    .content_sections_4 {
+        flex-direction: column;
+    }
+
+    .media_content_1 img {
+        width: 400px;
+    }
+
+    .media_content_4 img {
+        width: 410px;
+    }
+
+    .last_one {
+        width: 80vw;
+        padding: 30px 40px;
+    }
+
+    .links {
+        grid-template-columns: 1fr 1fr;
+    
+    }
+
+    .last_2nd {
+        width: 85vw;
+    }
+}

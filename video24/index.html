@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outlines</title>
+    <style>
+        .box1{
+            border: 2px solid black;
+            display: inline-block;
+            width: 250px;
+            margin: 30px;
+            padding: 35px;
+        }
+
+        /* box-shadow: h-offset v-offset blur spread color inset; */
+
+        /* This is for Inside shadow for box
+        .boxKIshadow{
+                box-shadow: inset h-inset v-inset blur spread color;
+                box-shadow: inset 5px 5px 15px 5px #844c4c; 
+        }
+        */
+
+        /* This is for Outside shadow box */
+        .boxKIshadow{
+            /*  box-shadow: h-offset v-offset blur spread color; */                
+                box-shadow: 1px 6px 25px 3px #844c4c; 
+        }
+
+        /* text-shadow: h-offset v-offset blur color; */
+        .textKIshadow{              
+        /*  text-shadow: h-offset v-offset blur color; */
+            text-shadow: 2px 2px 4pxa #099807;
+        }
+        
+        /* Outline and Outline-offset and Border-radius(curve) Usage */
+        .box3{
+            /* An outline is drawn around elements, outside the borders, to make the element "stand out" */
+            outline: 3px solid rgb(207, 154, 89);
+
+            /*you can set the space between an outline and the edge or border of an element.*/
+            outline-offset: 12px;
+            margin: 20px;
+            padding: 12px;
+            border: 2px solid red;
+
+            /* Rounded Corners: Borders can have rounded corners using border-radius, while outlines generally cannot */
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 boxKIshadow textKIshadow">
+        I am a Box
+    </div>
+    <p class="box3">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat sequi quasi vitae libero beatae error, enim distinctio a reiciendis quos esse eius soluta, tenetur debitis aperiam nam! Nihil sunt neque illum ea rem doloremque inventore quaerat ducimus odio laudantium eligendi minus ab vero asperiores voluptas cupiditate, impedit, aliquid, sit quo modi itaque! Laboriosam, dicta facere.
+    </p>
+</body>
+</html>

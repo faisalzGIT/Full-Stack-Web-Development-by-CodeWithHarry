@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling 'Lists' using CSS</title>
+    <style>
+        nav ul li{
+            display: list-item;
+            list-style:decimal;
+            /* list-style-type: "🎯"; */  /*press win+. to add emoji as marker */
+            padding: 7px;
+            margin: 7px;
+            width: 200px;
+            background-color:rgb(243, 238, 185);
+            list-style-position: inside;
+            border: 2px solid black;
+            /* list-style-image: url(markerimg.jpg); */
+            font-size: 20px;
+            /* list-style: inside { disc OR  url(markerimg.jpg) }; */
+        }
+        body{
+            background-color: rgb(242, 240, 218);
+        }
+
+        /* Giving each of list item their own marker emoji */
+        li:first-child{
+            list-style-type: "🏠";
+        }
+        li:nth-child(2){
+            list-style-type: "❔";
+        }
+        li:nth-child(3){
+            list-style-type: "📞";
+        }
+        /* 
+        This is used to display the nav bar horizontally
+        ul{
+            display: flex;
+        } */
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li> About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>

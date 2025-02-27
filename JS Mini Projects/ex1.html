@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercise 1</title>
+</head>
+
+<body>
+	<marquee behavior="" direction="" style="color: red;">Alhamdulillah</marquee>
+
+</body>
+<script>
+
+	let guessCount = 0; // To track the number of guesses
+
+	function checkNumb(randomWala, guessedWala) {
+		guessCount++; // Increment guess count with each guess
+
+		// Compare the guessed number with the random number
+		if (randomWala === guessedWala) {
+			console.log(`You have guessed correctly in ${guessCount} guesses!`);
+			let score = 100 - (guessCount - 1); // Calculate score
+			console.log(`Your score: ${score}`);
+			return; // Terminate after correct guess
+		} else if (randomWala > guessedWala) {
+			console.log('The number you guessed is less than the generated number.');
+			guesstheNumb(randomWala); // Ask for another guess
+		} else {
+			console.log('The number you guessed is greater than the generated number.');
+			guesstheNumb(randomWala); // Ask for another guess
+		}
+	}
+
+	function genRandomNumb() {
+		return Math.floor(Math.random() * 100) + 1;
+	}
+
+	function guesstheNumb(randomOne) {
+			let guessedNumb = parseInt(prompt("Guess the number (1-100):"), 10);
+			if (!isNaN(guessedNumb)) { // Check if input is a valid number
+				checkNumb(randomOne, guessedNumb);
+			} else {
+				console.log("Please enter a valid number.");
+				guesstheNumb(randomOne); // Re-prompt if the input is invalid
+			}
+	}
+
+	// Start the game
+	let randomNumber = genRandomNumb();
+	console.log(randomNumber + " (For debugging, this is the random number)");
+	guesstheNumb(randomNumber);
+
+
+	/*
+	1) generate a random number between 1 - 100
+	2) store it in a variable
+	3) then take input to guess the number and tell whether the guessed number is correct, less, or more than the OG number
+	4) Display score  of the Guesser by (100 - (no. of guesses))
+	5) Terminate the program once the number is guessed correctly 
+	*/
+
+
+</script>
+
+</html>

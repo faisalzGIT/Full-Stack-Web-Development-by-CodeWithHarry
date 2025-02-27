@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS</title>
+    <style>
+        .box:nth-child(3) {
+            font-size: 30px;
+        }
+
+        li:first-child,
+        .box:nth-child(3) {
+            color: rgb(42, 97, 79);
+        }
+
+        .box:nth-child(2):first-line {
+            color: red;
+        }
+
+        .boxes * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        [data-color="primary"] {
+            font-weight: bolder;
+        }
+
+        .box:nth-child(even) {
+            background-color: antiquewhite;
+        }
+        .newpara:nth-last-child(2){
+            background-color: darkseagreen;
+        }
+        .newdiv::before{
+            content: "Before wala content";
+            color:rgb(221, 221, 42);
+        }
+        .newdiv::after{
+            content: "After wala content";
+            color:rgb(221, 221, 42);
+        }
+        .box::selection{
+            color: violet;
+            background-color:rgb(11, 63, 11);
+        }
+        .newpara::first-letter{
+                font-size: 25px;
+        }
+        input::placeholder{
+            color: blue;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="box">i am a box</div>
+        <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur at nostrum laudantium
+            expedita, ad suscipit maxime quod veniam to Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Obcaecati, eligendi perspiciatis. Tempora autem corporis animi, at vel dolorum. Quasi veritatis repellendus
+            necessitatibus, iure dolorum assumenda! Provident corrupti repellat corporis voluptate inventore. Debitis
+            aliquam hic dolorum deserunt similique amet aut illum sint consectetur alias mollitia libero adipisci,
+            placeat ipsa nihil ab labore maiores provident numquam cum distinctio iusto. Soluta, nisi ab quidem
+            perferendis, quae earum quo rem, facilis ipsum ullam voluptate aliquid excepturi natus dignissimos dolor
+            exercitationem tempore eveniet laborum odio fugiat modi sequi? Quia dicta quisquam doloremque aliquam dolor
+            modi eligendi optio quibusdam fuga cumque ab, est repudiandae reprehenderit aliquid? Commodi quo ipsa aut.
+            Quasi sit cupiditate nam eligendi culpa a, officiis est. Voluptatem, velit! Maxime sunt incidunt nisi
+            pariatur culpa, delectus libero rem aut id cum adipisci excepturi porro odit necessitatibus, deleniti illum
+            magnam blanditiis unde. Quis assumenda quo, nobis corrupti officia excepturi eius eos omnis sunt cupiditate.
+            Velit possimus provident fugiat animi soluta.
+            tam nihil animi odio hic accusamus molestiae pariatur deleniti nemo sequi in amet. In, facere totam!</div>
+        <div class="box">i am a box</div>
+    </div>
+    <hr>
+    <span>
+        <ul>
+            <li>mub</li>
+            <li>mub</li>
+            <li>mub</li>
+
+        </ul>
+    </span>
+    <div class="newdiv">
+        <div class="newpara" data-color="primary"> No.1 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Explicabo nihil necessitatibus nulla quo reiciendis similique sequi iste! Fugit in quas, ratione hic,
+            laudantium aperiam animi sapiente, vero quae cumque temporibus.</div>
+        <div class="newpara">No.2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, et.</div>
+        <div class="newpara">No.3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur praesentium amet
+            sapiente molestias nam veritatis delectus voluptatem, eligendi corporis atque alias adipisci quam, commodi
+            culpa facilis quis quia laudantium modi.</div>
+        <div class="newpara">No.4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis atque aliquam quae
+            blanditiis odit laboriosam dignissimos ipsa deserunt placeat quisquam, voluptatum soluta porro reprehenderit
+            possimus. In laboriosam minima provident eaque?</div>
+        <div class="newpara">No.5 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda possimus distinctio
+            laborum nemo voluptates, corrupti numquam, ad culpa quibusdam architecto quisquam repudiandae. Autem libero
+            consectetur suscipit! Dignissimos adipisci molestiae sit.</div>
+    </div>
+    <input type="text" placeholder="type your name here">
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex7</title>
+</head>
+<body>
+	
+</body>
+<script>
+	class Password{
+		constructor(){
+			console.log('Wecome to password generator:');
+			this.pass = "";
+		}
+		generatePassword(len){
+			let chars = "abcdefghijklmnopqrstuvwxyz";
+			let numbs = "1234567890";
+			let symbols = "!@#$%^&*()"
+			if(len<3){
+				console.log('Password Too Short!! it should be greater than or equal to 3!!');
+			} else {
+				let i = 0;
+				while(i<len){
+					this.pass += chars[Math.floor(Math.random() * chars.length)];
+					this.pass += numbs[Math.floor(Math.random() * numbs.length)];
+					this.pass += symbols[Math.floor(Math.random() * symbols.length)];
+					i+=3;
+				}
+				this.pass = this.pass.substr(0, len);
+				return this.pass;
+			}
+		}
+	}
+
+	let P = new Password();
+	console.log(P.generatePassword(7));
+</script>
+
+</html>

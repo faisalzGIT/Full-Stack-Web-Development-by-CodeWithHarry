@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        body{
+            background-color: brown;
+            color:springgreen;
+        }
+        @media screen and (orientation:portrait) {
+            body{
+                border:3px solid lime;
+            }
+        }
+
+        @media only screen and (max-width: 445px){
+            body{
+                background-color: cadetblue;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+
+        .boxes{
+            display:flex;
+        }
+        .box{ 
+            height: 344px;
+            width: 344px;
+            background-color:darkblue;
+            padding: 3px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="newe">
+        if the length>=width of the screen then the lime coloured border will be shown in outside body
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+
+</body>
+</html>

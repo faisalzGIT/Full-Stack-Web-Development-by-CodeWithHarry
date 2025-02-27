@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Note Taking App</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+			padding: 20px;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		input,
+		textarea {
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			width: 100%;
+		}
+
+		button {
+			padding: 10px;
+			background-color: #28a745;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+
+		button:hover {
+			background-color: #218838;
+		}
+
+		#noteList {
+			margin-top: 20px;
+		}
+
+		#notes {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		#notes li {
+			background-color: white;
+			padding: 10px;
+			border: 1px solid #ccc;
+			margin-bottom: 10px;
+			border-radius: 5px;
+		}
+
+		.note-title {
+			font-weight: bold;
+		}
+
+		.note-date {
+			font-size: 12px;
+			color: gray;
+		}
+
+		.note-delete {
+			color: red;
+			cursor: pointer;
+			margin-left: 10px;
+			font-size: 14px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Note Taking App</h1>
+		<form id="noteForm">
+			<input type="text" id="noteTitle" placeholder="Note Title" required>
+			<textarea id="noteContent" placeholder="Your Note" required></textarea>
+			<button type="submit">Add Note</button>
+		</form>
+
+		<div id="noteList">
+			<h2>Your Notes</h2>
+			<ul id="notes"></ul>
+		</div>
+	</div>
+
+	<script>
+		document.getElementById("noteForm").addEventListener("submit", function (e) {
+			e.preventDefault();
+
+			// Get the note title and content from the form
+			const noteTitle = document.getElementById("noteTitle").value;
+			const noteContent = document.getElementById("noteContent").value;
+
+			// Create the note object
+			const newNote = {
+				title: noteTitle,
+				content: noteContent,
+				date: new Date().toLocaleString()  // Get the current date and time
+			};
+
+			// Save the note to local storage
+			saveNoteToLocalStorage(newNote);
+
+			// Clear the form
+			document.getElementById("noteForm").reset();
+
+			// Reload the note list
+			loadNotesFromLocalStorage();
+		});
+
+		function saveNoteToLocalStorage(note) {
+			// Retrieve existing notes from local storage
+			let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+			// Add the new note to the array
+			notes.push(note);
+
+			// Save the updated array back to local storage
+			localStorage.setItem("notes", JSON.stringify(notes));
+		}
+
+		function loadNotesFromLocalStorage() {
+			const notesList = document.getElementById("notes");
+			notesList.innerHTML = "";  // Clear the list before reloading
+
+			// Retrieve notes from local storage
+			const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+
+			// Loop through each saved note and display it
+			savedNotes.forEach((note, index) => {
+				const li = document.createElement("li");
+
+				li.innerHTML = `
+            <div class="note-title">${note.title}</div>
+            <div>${note.content}</div>
+            <div class="note-date">${note.date}</div>
+            <span class="note-delete" onclick="deleteNote(${index})">Delete</span>
+        `;
+
+				notesList.appendChild(li);
+			});
+		}
+
+		function deleteNote(index) {
+			// Retrieve existing notes from local storage
+			let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+			// Remove the note at the given index
+			notes.splice(index, 1);
+
+			// Save the updated notes array back to local storage
+			localStorage.setItem("notes", JSON.stringify(notes));
+
+			// Reload the note list
+			loadNotesFromLocalStorage();
+		}
+
+		// Load notes when the page loads
+		window.onload = loadNotesFromLocalStorage;
+
+	</script>
+</body>
+
+</html>

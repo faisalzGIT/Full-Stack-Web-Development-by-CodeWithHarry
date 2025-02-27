@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex8</title>
+	<style>
+		body{
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: 100vh;
+			gap: 9px;
+		}
+		label{
+			font-size: 40px;
+		}
+		input{
+			height: 35px;
+			width: 60px;
+			font-size: 30px;
+		}
+		button{
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<!-- Make an alarm clock -->
+	 <div class="cont">
+		<label for="timerAlarm">Set Time (In Minutes):</label>
+		<input id="timerAlarm" type="number">
+	</div>
+	<button id="btn">Start</button>
+</body>
+<script>
+	document.getElementById("btn").addEventListener("click", ()=>{
+		
+		let waqt = document.getElementById("timerAlarm").value;
+		setTimeout(()=>{
+			alert("Times UP!!");
+		},waqt * 60000);
+
+		console.log('Time Set');
+		
+	});
+</script>
+</html>

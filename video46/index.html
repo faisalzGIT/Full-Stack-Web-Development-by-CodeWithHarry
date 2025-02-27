@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container{
+            background-color: cadetblue;
+            width: 60vw;
+            height: 80vh;
+        }
+
+        .box{
+            width: 80px;
+            height: 20px;
+            /* animation: faisalkeAnimations;
+            animation-duration: 3s;
+            animation-timing-function:cubic-bezier(0.01, 0, 0.12, 1.11);
+            animation-delay: 1.5s;
+            animation-iteration-count: 2;
+            animation-direction:alternate;
+            animation-play-state: paused; */
+            
+            /* Animation Shortcut */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: faisalkeAnimations 3s ease-in-out 2s infinite alternate, anime2 4s ease-in-out 1.5s infinite alternate;
+            
+        }
+
+        .box2{
+            background-color: brown;
+            width: 120px;
+            height: 20px;
+        }
+
+        @keyframes faisalkeAnimations {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: yellow;
+                transform: translateX(1000px);
+            }
+        }
+        @keyframes anime2 {
+            0%{
+                transform: rotate(150deg);
+            }
+            20%{
+                transform: rotate(250deg);
+            }
+            50%{
+                transform: rotate(350deg);
+            }
+            80%{
+                transform: rotate(450deg);
+            }
+            100%{
+                transform: rotate(550deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            THE BOX
+        </div>
+        <hr>
+        <div class="box2">
+            The SEcond BOX
+        </div>
+    </div>
+</body>
+</html>
