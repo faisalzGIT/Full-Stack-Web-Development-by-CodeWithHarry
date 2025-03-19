@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X.com</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        .montserrat-font {
+                font-family: "Montserrat", sans-serif;
+                font-style: normal;
+                /* font-optical-sizing: auto; */
+                /* font-weight: <weight>; */
+        }
+    </style>
+</head>
+
+<body class="bg-black montserrat-font">
+    <div class="main w-[80%] flex mx-auto h-[100vh] ">
+        <div class="first bg-black-900 w-[20%] flex flex-col">
+            <ul class="gap-[6px] h-[90%] flex flex-col">
+                <li class="mainLogo my-3 mx-2    ">
+                    <img class=" w-7 h-7" src="/SVGs/mainLogo.svg" alt="main logo">
+                        
+                </li>
+                <li class="flex items-center gap-[13px] py-2 px-3 w-fit cursor-pointer hover:bg-[#2c2c2c9b] rounded-full"><img class="w-6" src="/SVGs/home.svg" alt=""><span class="font-medium text-[19px] text-white">Home</span></li>
+                <li class="flex items-center gap-[13px] py-2 px-3 w-fit cursor-pointer hover:bg-[#2c2c2c9b] rounded-full"><img class="w-6" src="/SVGs/explore.svg" alt=""><span class="font-medium text-[19px] text-white ">Explore</span></li>
+                <li class="flex items-center gap-[13px] py-2 px-3 w-fit cursor-pointer hover:bg-[#2c2c2c9b] rounded-full"><img class="w-6" src="/SVGs/notifications.svg" alt=""><span class="font-medium text-[19px] text-white">Notifications</span></li>
+                <li class="flex items-center gap-[13px] py-2 px-3 w-fit cursor-pointer hover:bg-[#2c2c2c9b] rounded-full"><img class="w-6" src="/SVGs/messages.svg" alt=""><span class="font-medium text-[19px] text-white">Messages</span></li>
+                <li class="flex items-center gap-[13px] py-2 px-3 w-fit cursor-pointer hover:bg-[#2c2c2c9b] rounded-full"><img class="w-6" src="/SVGs/grok.svg" alt=""><span class="font-medium text-[19px] text-white">Grok</span></li>
+                <li class="flex items-center gap-[13px] py-2 px-3 w-fit cursor-pointer hover:bg-[#2c2c2c9b] rounded-full"><img class="w-6" src="/SVGs/communities.svg" alt=""><span class="font-medium text-[19px] text-white">Communities</span></li>
+                <li class="flex items-center gap-[13px] py-2 px-3 w-fit cursor-pointer hover:bg-[#2c2c2c9b] rounded-full"><img class="w-6" src="/SVGs/premium.svg" alt=""><span class="font-medium text-[19px] text-white">Premium</span></li>
+                <li class="flex items-center gap-[13px] py-2 px-3 w-fit cursor-pointer hover:bg-[#2c2c2c9b] rounded-full"><img class="w-6" src="/SVGs/verifiedOrgs.svg" alt=""><span class="font-medium text-[19px] text-white">Verified Orgs</span></li>
+                <li class="flex items-center gap-[13px] py-2 px-3 w-fit cursor-pointer hover:bg-[#2c2c2c9b] rounded-full"><img class="w-6" src="/SVGs/profile.svg" alt=""><span class="font-medium text-[19px] text-white">Profile</span></li>
+                <li class="flex items-center gap-[13px] py-2 px-3 w-fit cursor-pointer hover:bg-[#2c2c2c9b] rounded-full"><img class="w-6" src="/SVGs/more.svg" alt=""><span class="font-medium text-[19px] text-white">More</span></li>
+                <li><button class="cursor-pointer rounded-full bg-white p-3 w-[90%] font-bold hover:font-extrabold hover:bg-[#d9d8d8]">Post</button></li>
+            </ul>
+            <div class="myDetails w-fit flex items-center gap-2.5 rounded-full hover:bg-[#2c2c2c9b] p-3"> 
+                <div class="p1 "><img class="w-10 h-10 rounded-full object-cover" src="/images/myProfile.JPG" alt="myProfile"></div>
+                <div class="p2">
+                        <div class="fullName text-white font-semibold text-[15px]">Faisal</div>
+                        <div class="username text-[#787a7c] text-[14px]">@whichfaisal</div>
+                </div>
+                <div class="p3 text-white text-2xl pb-1 pl-2">...</div>
+            </div>
+        </div>
+        <div class="second bg-black w-[50%] border border-[#2f3336] text-white">
+                <div class="firstOne flex h-12 ">
+                        <div class="fy w-1/2 h-6 p-6 font-medium flex flex-col items-center justify-center border-b border-b-[#2f3336] hover:bg-[#2c2c2c9b] hover:font-bold"><span>For you</span></div>
+                        <div class="fg w-1/2 h-6 p-6 font-medium flex flex-col items-center justify-center border-b border-b-[#2f3336] hover:bg-[#2c2c2c9b] hover:font-bold"><span>Following</span></div>
+                </div>
+                <div class="secondOne">
+                        <div class="top h-40 border-b border-b-[#2f3336] flex">
+                                <div class="profile w-[11%] flex justify-center mt-4"><img class="w-10 h-10 rounded-full object-cover " src="/images/myProfile.JPG" alt="myProfile"></div>
+                                <div class="moreThings w-[89%] h-full flex flex-col p-6 pl-2">
+                                        <div class="whatsHappening my-1"><input type="text" class="w-full placeholder:text-lg outline-none" name="" id="" placeholder="What's happening?"></div>
+                                        
+                                        <div class="everyoneCanReply flex gap-1 border-b border-b-[#2f3336] pb-3 my-3 ">
+                                                <img class="w-4" src="/SVGs/globe.svg" alt="">
+                                                <span class="text-[14px] text-[#1d9bf0] font-semibold">Everyone can reply</span>
+                                        </div>
+                                        <hr class="h-[2px] bg-[2c2c2c9b] border-none">
+                                        
+                                        <div class="lowerPart flex flex-col justify-center gap-6 my-2">
+                                                <div class="features flex items-center  gap-2.5 relative h-5">
+                                                        <img class="w-5" src="SVGs/img.svg" alt="image svg">
+                                                        <img class="w-5" src="SVGs/gif.svg" alt="image svg">
+                                                        <img class="w-5" src="SVGs/blueGrok.svg" alt="image svg">
+                                                        <img class="w-5" src="SVGs/opt.svg" alt="image svg">
+                                                        <img class="w-5" src="SVGs/smiley.svg" alt="image svg">
+                                                        <img class="w-5" src="SVGs/schedule.svg" alt="image svg">
+                                                        <img class="w-5" src="SVGs/location.svg" alt="image svg">
+                                                        <div class="postBtn absolute right-1"><button class="text-[15px] cursor-pointer rounded-full text-black bg-white py-1.5 px-4 w-[9] font-bold hover:font-extrabold hover:bg-[#d9d8d8]" >Post</button></div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="scrollingBottom w-full h-[71vh] border ">
+                                <ul class="w-full h-[71vh] overflow-y-scroll">
+                                        <li class="w-full h-10 flex">
+                                                <div class="profilePicture w-[10%] h-10 bg-red-600"><img class="w-10 h-10 rounded-full object-cover" src="/images/myProfile.JPG" alt="myProfile"></div>
+                                                <div class="tweet w-[90%] h-10 bg-cyan-500">
+                                                        <div class="tweetDetails"></div>
+                                                        <div class="actualTweet"></div>
+                                                        <div class="features"></div>
+                                                </div>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+        </div>
+        <div class="third bg-black w-[30%]">werfaserg</div>
+    </div>
+</body>
+
+</html>
