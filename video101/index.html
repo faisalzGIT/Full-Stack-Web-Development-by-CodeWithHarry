@@ -33,8 +33,8 @@
 </head>
 
 <body class="bg-black montserrat-font">
-        <div class="main w-[80%] flex mx-auto h-[100vh] ">
-                <div class="first bg-black-900 w-[20%] flex flex-col">
+        <div class="main w-[82%] flex mx-auto h-[100vh] ">
+                <div class="first bg-black w-[22%] flex flex-col">
                         <ul class="gap-[6px] h-[90%] flex flex-col">
                                 <li class="mainLogo my-3 mx-2">
                                         <img class=" w-7 h-7" src="/SVGs/mainLogo.svg" alt="main logo">
@@ -62,25 +62,26 @@
                                 <li><button class="cursor-pointer rounded-full bg-white p-3 w-[90%] font-bold hover:font-extrabold hover:bg-[#d9d8d8]">Post</button>
                                 </li>
                         </ul>
-                        <div class="myDetails w-fit flex items-center gap-2.5 rounded-full hover:bg-[#2c2c2c9b] p-3">
-                                <div class="p1 "><img class="w-10 h-10 rounded-full object-cover" src="/images/myProfile.JPG" alt="myProfile"></div>
-                                <div class="p2">
-                                        <div class="fullName text-white font-semibold text-[15px]">Faisal</div>
+                        <div class="myDetails w-[95%] flex items-center gap-2.5 rounded-full hover:bg-[#2c2c2c9b] p-3 relative">
+                                <div class="p1 w-[20%]"><img class="w-10 h-10 rounded-full object-cover" src="/images/myProfile.JPG" alt="myProfile"></div>
+                                
+                                <div class="p2 w-[100%]">
+                                        <div class="fullName  text-white font-semibold text-[14px]">Muhammad Faisal</div>
                                         <div class="username text-[#787a7c] text-[14px]">@whichfaisal</div>
                                 </div>
-                                <div class="p3 text-white text-2xl pb-1 pl-2">...</div>
+                                <div class="p3 text-white text-2xl pb-1 pl-2 absolute bottom-5 left-55" >...</div>
                         </div>
                 </div>
-                <div class="second bg-black w-[50%] border border-[#2f3336] text-white">
-                        <div class="firstOne flex h-12 ">
+                <div class="second  w-[50%] border border-[#2f3336] text-white relative">
+                        <div class="firstOne z-10 flex h-12 bg-black/50 absolute top-0% w-full">
                                 <div class="fy w-1/2 h-6 p-6 font-medium flex flex-col items-center justify-center border-b border-b-[#2f3336] hover:bg-[#2c2c2c9b] hover:font-bold">
                                         <span>For you</span></div>
                                 <div class="fg w-1/2 h-6 p-6 font-medium flex flex-col items-center justify-center border-b border-b-[#2f3336] hover:bg-[#2c2c2c9b] hover:font-bold">
                                         <span>Following</span></div>
                         </div>
-                        <div class="secondOne">
-                                <div class="scrollingBottom w-full h-[71vh]  ">
-                                        <ul class="w-full h-[92vh] overflow-y-scroll scrollbar-hide">
+                        <div class="secondOne ">
+                                <div class="scrollingBottom w-full h-[90vh]  ">
+                                        <ul class="w-full h-[92vh] overflow-y-scroll scrollbar-hide pt-11">
                                                 <li class="w-full h-40 flex">
                                                         <div class="top h-40 w-full border-b border-b-[#2f3336] flex">
                                                                 <div class="profile w-[11%] flex justify-center mt-4">
@@ -111,10 +112,9 @@
                                                         </div>
                                                 </li>
                                                 <li class="w-full h-fit flex border-b border-b-[#2f3336]">
-                                                        <div class="profilePicture w-[10%] h-auto p-3"><img class="w-10 h-10 rounded-full object-cover" src="/images/myProfile.JPG" alt="myProfile">
+                                                        <div class="profilePicture p-[8px] w-[10%] h-auto"><img class="w-10 h-10 rounded-full object-cover" src="/images/indianTechGuide.jpeg" alt="myProfile">
                                                         </div>
-                                                        <div
-                                                                class="tweet w-[90%] h-auto p-3 pl-0 flex flex-col gap-1.5">
+                                                        <div class="tweet w-[90%] h-auto p-3 pl-0 flex flex-col gap-1.5">
                                                                 <div class="tweetDetails  text-[15px] flex justify-between ">
                                                                         <div class="p1 flex gap-1">
                                                                                 <span class="font-semibold">Indian Tech & Infra</span>
@@ -130,7 +130,7 @@
                                                                 </div>
                                                                 <div class="actualTweet flex flex-col gap-2.5 ">
                                                                         <p class="text-[14px]">🚨 "For a travel of 350 km, the fare in India is ₹121, in Pakistan it is ₹436, in Bangladesh it is ₹323 and in Sri Lanka it is ₹413. Railway fares in India are far less than the neighboring countries," says Ashwini Vaishnaw.</p>
-                                                                        <img src="/images/indianTech.jpeg" alt="" class="rounded-2xl">
+                                                                        <img src="/images/indianTech.jpeg" alt="" class="border rounded-2xl backdrop-blur-md bg-white/10 border-white/20">
                                                                 </div>
                                                                 <div class="features flex justify-between mt-1.5">
                                                                         <div class="comments flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#1d9bf0] hover:bg-[#2235e04e] cursor-pointer"><img src="/SVGs/comments.svg" alt="" class="w-5"> <span class="">137</span></div>
@@ -141,11 +141,275 @@
                                                                 </div>
                                                         </div>
                                                 </li>
+                                                <li class="w-full h-fit flex border-b border-b-[#2f3336]">
+                                                        <div class="profilePicture p-[8px] w-[10%] h-auto"><img class="w-10 h-10 rounded-full object-cover" src="/images/khabibProfile.jpg" alt="myProfile">
+                                                        </div>
+                                                        <div class="tweet w-[90%] h-auto p-3 pl-0 flex flex-col gap-1.5">
+                                                                <div class="tweetDetails  text-[15px] flex justify-between ">
+                                                                        <div class="p1 flex gap-1">
+                                                                                <span class="font-semibold">Khabib Nurmagomedov</span>
+                                                                                <img class="w-5" src="SVGs/verified.svg" alt="verified">
+                                                                                <div class="username text-[#616569]"> @teamKhabib</div>
+                                                                                <div class="dot text-[#616569]">·</div>
+                                                                                <div class="time text-[#616569]">June 16, 2024</div>
+                                                                        </div>
+                                                                        <div class="p2 flex">
+                                                                                <img src="/SVGs/greyGrok.svg" alt="" class="w-5">
+                                                                                <img src="/SVGs/threeDots.svg" alt="" class="w-5 ">
+                                                                        </div>
+                                                                </div>
+                                                                <div class="actualTweet flex flex-col gap-2.5 ">
+                                                                        <p class="text-[14px]">Eid Mubarak🌙</p>
+                                                                        <img src="/images/khabib.jpeg" alt="" class="border rounded-2xl backdrop-blur-md bg-white/10 border-white/20">
+                                                                </div>
+                                                                <div class="features flex justify-between mt-1.5">
+                                                                        <div class="comments flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#1d9bf0] hover:bg-[#2235e04e] cursor-pointer"><img src="/SVGs/comments.svg" alt="" class="w-5"> <span class="">137</span></div>
+                                                                        <div class="retweet flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#00ba7c] hover:bg-[#00ba7c4e] cursor-pointer"><img src="/SVGs/retweet.svg" alt="" class="w-5"> <span class="">263</span></div>
+                                                                        <div class="likes flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#f91880] hover:bg-[#f918804e] cursor-pointer"><img src="/SVGs/likes.svg" alt="" class="w-5"> <span class="">34</span></div>
+                                                                        <div class="view flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#1d9bf0] hover:bg-[#2235e04e] cursor-pointer"><img src="/SVGs/views.svg" alt="" class="w-5"> <span class="">2432</span></div>
+                                                                        <div class="save&share flex gap-1"><img src="/SVGs/save.svg" alt="" class="w-5 hover:bg-[#2235e04e] rounded-full"> <img class="w-5 hover:bg-[#2235e04e] rounded-full" src="/SVGs/share.svg" alt=""></div>
+                                                                </div>
+                                                        </div>
+                                                </li>
+                                                <li class="w-full h-fit flex border-b border-b-[#2f3336]">
+                                                        <div class="profilePicture p-[8px] w-[10%] h-auto"><img class="w-10 h-10 rounded-full object-cover" src="/images/ronaldoProfile.jpg" alt="myProfile">
+                                                        </div>
+                                                        <div class="tweet w-[90%] h-auto p-3 pl-0 flex flex-col gap-1.5">
+                                                                <div class="tweetDetails  text-[15px] flex justify-between ">
+                                                                        <div class="p1 flex gap-1">
+                                                                                <span class="font-semibold">Cristiano ronaldo</span>
+                                                                                <img class="w-5" src="SVGs/verified.svg" alt="verified">
+                                                                                <div class="username text-[#616569]"> @cristiano</div>
+                                                                                <div class="dot text-[#616569]">·</div>
+                                                                                <div class="time text-[#616569]">3h</div>
+                                                                        </div>
+                                                                        <div class="p2 flex">
+                                                                                <img src="/SVGs/greyGrok.svg" alt="" class="w-5">
+                                                                                <img src="/SVGs/threeDots.svg" alt="" class="w-5 ">
+                                                                        </div>
+                                                                </div>
+                                                                <div class="actualTweet flex flex-col gap-2.5 ">
+                                                                        <p class="text-[14px]">Working to win! 🏋️‍♀️</p>
+                                                                        <img src="/images/ronaldo.jpeg" alt="" class="border rounded-2xl backdrop-blur-md bg-white/10 border-white/20">
+                                                                </div>
+                                                                <div class="features flex justify-between mt-1.5">
+                                                                        <div class="comments flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#1d9bf0] hover:bg-[#2235e04e] cursor-pointer"><img src="/SVGs/comments.svg" alt="" class="w-5"> <span class="">137</span></div>
+                                                                        <div class="retweet flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#00ba7c] hover:bg-[#00ba7c4e] cursor-pointer"><img src="/SVGs/retweet.svg" alt="" class="w-5"> <span class="">263</span></div>
+                                                                        <div class="likes flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#f91880] hover:bg-[#f918804e] cursor-pointer"><img src="/SVGs/likes.svg" alt="" class="w-5"> <span class="">34</span></div>
+                                                                        <div class="view flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#1d9bf0] hover:bg-[#2235e04e] cursor-pointer"><img src="/SVGs/views.svg" alt="" class="w-5"> <span class="">2432</span></div>
+                                                                        <div class="save&share flex gap-1"><img src="/SVGs/save.svg" alt="" class="w-5 hover:bg-[#2235e04e] rounded-full"> <img class="w-5 hover:bg-[#2235e04e] rounded-full" src="/SVGs/share.svg" alt=""></div>
+                                                                </div>
+                                                        </div>
+                                                </li>
+                                                <li class="w-full h-fit flex border-b border-b-[#2f3336]">
+                                                        <div class="profilePicture p-[8px] w-[10%] h-auto"><img class="w-10 h-10 rounded-full object-cover" src="/images/elonProfile.jpg" alt="myProfile">
+                                                        </div>
+                                                        <div class="tweet w-[90%] h-auto p-3 pl-0 flex flex-col gap-1.5">
+                                                                <div class="tweetDetails  text-[15px] flex justify-between ">
+                                                                        <div class="p1 flex gap-1">
+                                                                                <span class="font-semibold">Elon Musk</span>
+                                                                                <img class="w-5" src="SVGs/verified.svg" alt="verified">
+                                                                                <div class="username text-[#616569]"> @elonmusk</div>
+                                                                                <div class="dot text-[#616569]">·</div>
+                                                                                <div class="time text-[#616569]">58min</div>
+                                                                        </div>
+                                                                        <div class="p2 flex">
+                                                                                <img src="/SVGs/greyGrok.svg" alt="" class="w-5">
+                                                                                <img src="/SVGs/threeDots.svg" alt="" class="w-5 ">
+                                                                        </div>
+                                                                </div>
+                                                                <div class="actualTweet flex flex-col gap-2.5 ">
+                                                                        <p class="text-[14px]"></p>
+                                                                        <!-- <img src="/images/ronaldo.jpeg" alt="" class="rounded-2xl"> -->
+                                                                        <video controls src="/videos/elon.mp4" class="border rounded-2xl backdrop-blur-md bg-white/10 border-white/20"></video>
+                                                                </div>
+                                                                <div class="features flex justify-between mt-1.5">
+                                                                        <div class="comments flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#1d9bf0] hover:bg-[#2235e04e] cursor-pointer"><img src="/SVGs/comments.svg" alt="" class="w-5"> <span class="">137</span></div>
+                                                                        <div class="retweet flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#00ba7c] hover:bg-[#00ba7c4e] cursor-pointer"><img src="/SVGs/retweet.svg" alt="" class="w-5"> <span class="">263</span></div>
+                                                                        <div class="likes flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#f91880] hover:bg-[#f918804e] cursor-pointer"><img src="/SVGs/likes.svg" alt="" class="w-5"> <span class="">34</span></div>
+                                                                        <div class="view flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#1d9bf0] hover:bg-[#2235e04e] cursor-pointer"><img src="/SVGs/views.svg" alt="" class="w-5"> <span class="">2432</span></div>
+                                                                        <div class="save&share flex gap-1"><img src="/SVGs/save.svg" alt="" class="w-5 hover:bg-[#2235e04e] rounded-full"> <img class="w-5 hover:bg-[#2235e04e] rounded-full" src="/SVGs/share.svg" alt=""></div>
+                                                                </div>
+                                                        </div>
+                                                </li>
+                                                <li class="w-full h-fit flex border-b border-b-[#2f3336]">
+                                                        <div class="profilePicture p-[8px] w-[10%] h-auto"><img class="w-10 h-10 rounded-full object-cover" src="/images/carwowProfile.png" alt="myProfile">
+                                                        </div>
+                                                        <div class="tweet w-[90%] h-auto p-3 pl-0 flex flex-col gap-1.5">
+                                                                <div class="tweetDetails  text-[15px] flex justify-between ">
+                                                                        <div class="p1 flex gap-1">
+                                                                                <span class="font-semibold">carwow</span>
+                                                                                <img class="w-5" src="SVGs/verified.svg" alt="verified">
+                                                                                <div class="username text-[#616569]"> @carwowuk</div>
+                                                                                <div class="dot text-[#616569]">·</div>
+                                                                                <div class="time text-[#616569]">Jan 30</div>
+                                                                        </div>
+                                                                        <div class="p2 flex">
+                                                                                <img src="/SVGs/greyGrok.svg" alt="" class="w-5">
+                                                                                <img src="/SVGs/threeDots.svg" alt="" class="w-5 ">
+                                                                        </div>
+                                                                </div>
+                                                                <div class="actualTweet flex flex-col gap-2.5 ">
+                                                                        <p class="text-[14px]"></p>
+                                                                        <!-- <img src="/images/ronaldo.jpeg" alt="" class="rounded-2xl"> -->
+                                                                        <video  controls src="/videos/carwow.mp4" class="border rounded-2xl backdrop-blur-md bg-white/10 border-white/20"></video>
+                                                                </div>
+                                                                <div class="features flex justify-between mt-1.5">
+                                                                        <div class="comments flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#1d9bf0] hover:bg-[#2235e04e] cursor-pointer"><img src="/SVGs/comments.svg" alt="" class="w-5"> <span class="">14m</span></div>
+                                                                        <div class="retweet flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#00ba7c] hover:bg-[#00ba7c4e] cursor-pointer"><img src="/SVGs/retweet.svg" alt="" class="w-5"> <span class="">26m</span></div>
+                                                                        <div class="likes flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#f91880] hover:bg-[#f918804e] cursor-pointer"><img src="/SVGs/likes.svg" alt="" class="w-5"> <span class="">34m</span></div>
+                                                                        <div class="view flex items-center gap-1 rounded-full text-[#616569] text-[13px] py-1 px-1.5 hover:text-[#1d9bf0] hover:bg-[#2235e04e] cursor-pointer"><img src="/SVGs/views.svg" alt="" class="w-5"> <span class="">34.01m</span></div>
+                                                                        <div class="save&share flex gap-1"><img src="/SVGs/save.svg" alt="" class="w-5 hover:bg-[#2235e04e] rounded-full"> <img class="w-5 hover:bg-[#2235e04e] rounded-full" src="/SVGs/share.svg" alt=""></div>
+                                                                </div>
+                                                        </div>
+                                                </li>
                                         </ul>
                                 </div>
                         </div>
                 </div>
-                <div class="third bg-black w-[30%]">werfaserg</div>
+                <div class="third bg-black w-[30%] p-3 flex flex-col gap-3 h-[100vh] overflow-y-scroll scrollbar-hide">
+                        <div class="tagg"><h2 class="text-lg p-4 rounded-2xl shadow-lg border border-[#2f3336] text-white font-extrabold">Search filters</h2></div>
+                        <div class="firstOne ">
+
+                                
+                                <div class="w-full p-4 rounded-2xl bg-black text-white shadow-lg border border-[#2f3336]">
+                                        
+                                        <!-- People Filter -->
+                                        <div>
+                                            <h3 class="text-[15px] text-white font-semibold">People</h3>
+                                            <label class="flex items-center justify-between cursor-pointer mt-2">
+                                                <span class="text-[14px]">From anyone</span>
+                                                <input type="radio" name="people" class="hidden peer" checked>
+                                                <div class="w-4 h-4 border-2 border-gray-500 rounded-full peer-checked:border-[#1d9bf0] peer-checked:bg-[#1d9bf0]"></div>
+                                            </label>
+                                            <label class="flex items-center justify-between cursor-pointer mt-2">
+                                                <span class="text-[14px]">People you follow</span>
+                                                <input type="radio" name="people" class="hidden peer">
+                                                <div class="w-4 h-4 border-2 border-gray-500 rounded-full peer-checked:border-[#1d9bf0] peer-checked:bg-[#1d9bf0]"></div>
+                                            </label>
+                                        </div>
+                                    
+                                        <!-- Location Filter -->
+                                        <div class="mt-5">
+                                            <h3 class="text-[15px] text-white font-semibold">Location</h3>
+                                            <label class="flex items-center justify-between cursor-pointer mt-2">
+                                                <span class="text-[14px]">Anywhere</span>
+                                                <input type="radio" name="location" class="hidden peer" checked>
+                                                <div class="w-4 h-4 border-2 border-gray-500 rounded-full peer-checked:border-[#1d9bf0] peer-checked:bg-[#1d9bf0]"></div>
+                                            </label>
+                                            <label class="flex items-center justify-between cursor-pointer mt-2">
+                                                <span class="text-[14px]">Near you</span>
+                                                <input type="radio" name="location" class="hidden peer">
+                                                <div class="w-4 h-4 border-2 border-gray-500 rounded-full peer-checked:border-[#1d9bf0] peer-checked:bg-[#1d9bf0]"></div>
+                                            </label>
+                                        </div>
+                                    
+                                        <!-- Advanced Search -->
+                                        <a href="#" class="mt-4 block text-sm text-[#1d9bf0] hover:underline">Advanced search</a>
+                                    </div>            
+                        </div>
+                        <div class="secondOne bg-black  border border-[#2f3336] rounded-2xl">
+                                <div class="w-80 p-4">
+                                        <h2 class="text-xl text-white font-extrabold mb-5">What's happening</h2>
+                                        
+                                        <div class=" mb-4">
+                                            <div class="flex items-start gap-3">
+                                                <img src="/images/m5.jpeg" alt="M5" class="w-26 h-18 rounded-xl">
+                                                <div>
+                                                    <p class="text-[15px] font-semibold text-white">The M5 CS</p>
+                                                    <span class="text-xs text-[#787b7c]">LIVE</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                                <div class="space-y-4 flex justify-between">
+                                                    <div class="trends">
+                                                        <div class="trendin text-[#878889] text-[12px]">Trending · 1</div>
+                                                        <div class="whatTrendin text-white text-[15px] font-bold">T20 World Cup</div>
+                                                        <div class="noOfTrendinPosts text-[#878889] text-[13px]" >38.2k posts</div>
+                                                    </div> 
+                                                    <div class="opts text-[#878889] text-3xl ">...</div>
+                                                </div> 
+                                                <div class="space-y-4 flex justify-between">
+                                                    <div class="trends">
+                                                        <div class="trendin text-[#878889] text-[12px]">Trending · 2</div>
+                                                        <div class="whatTrendin text-white text-[15px] font-bold">Kidney Donation</div>
+                                                        <div class="noOfTrendinPosts text-[#878889] text-[13px]" >21.1k posts</div>
+                                                    </div> 
+                                                    <div class="opts text-[#878889] text-3xl ">...</div>
+                                                </div> 
+                                                <div class="space-y-4 flex justify-between">
+                                                    <div class="trends">
+                                                        <div class="trendin text-[#878889] text-[12px]">Trending · 3</div>
+                                                        <div class="whatTrendin text-white text-[15px] font-bold">#WorldSparrowDay</div>
+                                                        <div class="noOfTrendinPosts text-[#878889] text-[13px]" >12k posts</div>
+                                                    </div> 
+                                                    <div class="opts text-[#878889] text-3xl ">...</div>
+                                                </div> 
+                                        </div>
+                                        <button class="mt-4 text-blue-500 text-sm font-semibold hover:underline">Show more</button>
+                                    </div>
+                        </div>
+                        <div class="thirdOne bg-black  border border-[#2f3336] rounded-2xl p-3">
+                                <h1 class="text-[18px] font-bold text-white">Who to follow</h1>
+                                <div class="listOfWhoToFollow mt-4 flex flex-col gap-4">
+                                        <div class="idOf flex justify-between">
+                                                <div class="leftOne flex items-center gap-2">
+                                                        <img src="/images/bmwProfile.jpg" alt="" class="w-10 border rounded-full backdrop-blur-md bg-white/10 border-white/20">
+                                                        <div class="texts">
+                                                                <div class="usersname text-white  text-[14px] font-semibold flex gap-1">BMW<img class="w-5" src="SVGs/verified.svg" alt="verified"></div>
+                                                                <div class="username text-[#878889] text-[13px]">@bmw</div>
+                                                        </div>
+                                                </div>
+                                                <div class="rightOne"><button class="text-[13px] cursor-pointer rounded-full text-black bg-white py-1.5 px-4 w-[6] font-bold hover:font-extrabold hover:bg-[#d9d8d8]">Follow</button></div>
+                                        </div>
+                                        <div class="idOf flex justify-between">
+                                                <div class="leftOne flex items-center gap-2">
+                                                        <img src="/images/startupIndiaProfile.jpg" alt="" class="w-10 border rounded-full backdrop-blur-md bg-white/10 border-white/20">
+                                                        <div class="texts">
+                                                                <div class="usersname text-white  text-[14px] font-semibold flex gap-1">Startup India <img class="w-5" src="SVGs/verified.svg" alt="verified"></div>
+                                                                <div class="username text-[#878889] text-[13px]">@startupIndia</div>
+                                                        </div>
+                                                </div>
+                                                <div class="rightOne"><button class="text-[13px] cursor-pointer rounded-full text-black bg-white py-1.5 px-4 w-[6] font-bold hover:font-extrabold hover:bg-[#d9d8d8]">Follow</button></div>
+                                        </div>
+                                        <div class="idOf flex justify-between">
+                                                <div class="leftOne flex items-center gap-2">
+                                                        <img src="/images/ferrari.jpg" alt="" class="w-10 border rounded-full backdrop-blur-md bg-white/10 border-white/20">
+                                                        <div class="texts">
+                                                                <div class="usersname text-white  text-[14px] font-semibold flex gap-1">Ferrari<img class="w-5" src="SVGs/verified.svg" alt="verified"></div>
+                                                                <div class="username text-[#878889] text-[13px]">@ferrari</div>
+                                                        </div>
+                                                </div>
+                                                <div class="rightOne"><button class="text-[13px] cursor-pointer rounded-full text-black bg-white py-1.5 px-4 w-[6] font-bold hover:font-extrabold hover:bg-[#d9d8d8]">Follow</button></div>
+                                        </div>
+                                        <div class="idOf flex justify-between">
+                                                <div class="leftOne flex items-center gap-2">
+                                                        <img src="/images/bitcoinProfile.jpeg" alt="" class="w-10 border rounded-full backdrop-blur-md bg-white/10 border-white/20">
+                                                        <div class="texts">
+                                                                <div class="usersname text-white  text-[14px] font-semibold flex gap-1">Bitcoin<img class="w-5" src="SVGs/verified.svg" alt="verified"></div>
+                                                                <div class="username text-[#878889] text-[13px]">@Bitcoin</div>
+                                                        </div>
+                                                </div>
+                                                <div class="rightOne"><button class="text-[13px] cursor-pointer rounded-full text-black bg-white py-1.5 px-4 w-[6] font-bold hover:font-extrabold hover:bg-[#d9d8d8]">Follow</button></div>
+                                        </div>
+                                        <button class="mt-4 p-3 pt-0 pl-0 pb-1 text-blue-500 text-sm font-semibold hover:underline flex">Show more</button>
+
+                                        
+
+                                </div>
+                        </div>
+                        <div class="lastOne w-full text-[13px] text-[#878889] p-3 pt-1 ">
+                                <a  class="pr-1.5" href="https://x.com/tos">Terms of service</a>
+                                <a  class="pr-1.5" href="https://x.com/privacy">Privacy Policy</a>
+                                <a  class="pr-1.5" href="https://support.x.com/articles/20170514">Cookie Policy</a>
+                                <a  class="pr-1.5" href="https://help.x.com/resources/accessibility">Accessibility</a>
+                                <a  class="pr-1.5" href="https://business.x.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo">Ads info</a>
+                                <span class="pr-1.5" >More ···</span>
+                                <span class="pr-1.5" >© 2025 X Corp.</span>
+                        </div>
+                </div>
         </div>
 </body>
 
