@@ -14,8 +14,6 @@
                 .montserrat-font {
                         font-family: "Montserrat", sans-serif;
                         font-style: normal;
-                        /* font-optical-sizing: auto; */
-                        /* font-weight: <weight>; */
                 }
 
                 .scrollbar-hide::-webkit-scrollbar {
@@ -28,6 +26,20 @@
                         /* Hide scrollbar in IE, Edge */
                         scrollbar-width: none;
                         /* Hide scrollbar in Firefox */
+                }
+                @media (max-width: 768px) {
+                        .mobile-nav {
+                                position: fixed;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                z-index: 50;
+                                background: black;
+                                border-top: 1px solid #2f3336;
+                        }
+                        .mobile-hidden {
+                                display: none;
+                        }
                 }
         </style>
 </head>
