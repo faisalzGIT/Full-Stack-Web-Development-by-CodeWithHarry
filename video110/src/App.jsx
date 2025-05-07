@@ -1,33 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useRef, useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [showBtn2, setShowBtn2] = useState(false);
+    function handleClick() {
+        setShowBtn2(!showBtn2);
+    }
+    
 
-  return (
+
+
+    return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <div className="card bg-gray-950 m-0 p-0 w-[100vw] h-[100vh] flex justify-center items-center ">
+            <div className="flex flex-col items-center gap-4">
+                {showBtn2 && <button className='border rounded-3xl p-3 border-indigo-300 text-white'>I am BTN2</button>} //this is conditional rendering, this button will only show when showBtn2 is true
+                {showBtn2 ? <button className='border rounded-3xl p-3 border-indigo-300 text-white'>I am True</button> : <button className='border rounded-3xl p-3 border-indigo-300 text-white'>I am False</button>}
+                <button onClick={handleClick} className='border rounded-3xl p-3 border-indigo-300 text-white'>Toggle</button>
+            </div>
+        </div>    
     </>
   )
 }
