@@ -16,10 +16,10 @@ function App() {
 
     return (
         <>
-            <div ref={cont} className="containerr grid grid-cols-4 p-5 m-auto w-[95vw] h-[95vh] ">   
+            <div ref={cont} className="containerr grid grid-cols-4 p-5 m-auto text-center w-[99vw] h-[99vh]">   
                 {data ? (
                     data.map((post) => (
-                        <div key={post.id} className="w-[21vw] h-[21vh] text-white bg-slate-900 rounded-lg p-3 m-2 hover:bg-slate-700 transition duration-300">
+                        <div key={post.id} className="w-[21vw] h-[21vh] text-white bg-slate-900 rounded-lg p-3 m-2 mb-1 hover:bg-slate-700 transition duration-300">
                             <div className="title font-extrabold ">{post.title}</div>
                             <div className="desc font-semibold text-[10px]">{post.body}</div>
                         </div>
