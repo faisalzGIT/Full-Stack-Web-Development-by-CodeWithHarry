@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iTasks - Get Stuff Done</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        
+        .scrollbar-purple::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .scrollbar-purple::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .scrollbar-purple::-webkit-scrollbar-thumb {
+            background-color: rgba(79, 20, 125, 0.87);
+            /* Tailwind's purple-800 */
+            border-radius: 6px;
+        }
+
+
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            color: rgb(86, 1, 86);
+            background-color: rgb(246 238 255);
+        }
+
+        .monoton-regular {
+            font-family: "Monoton", sans-serif;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+        // This is a workaround for the "Uncaught ReferenceError: process is not defined" error
+        // that occurs when using Vite with React.
+        window.process = {
+            env: {
+                NODE_ENV: 'development'
+            }
+        };
+        // This is a workaround for the "Uncaught ReferenceError: __dirname is not defined" error
+        // that occurs when using Vite with React.
+        window.__dirname = '/';
+        window.__filename = '/index.html';
+        // This is a workaround for the "Uncaught ReferenceError: Buffer is not defined" error
+        // that occurs when using Vite with React.
+        window.Buffer = {
+            isBuffer: function (obj) {
+                return obj && typeof obj === 'object' && obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj);
+            }
+        };
+        // This is a workaround for the "Uncaught ReferenceError: process is not defined" error
+        // that occurs when using Vite with React.
+        window.process = {
+            env: {
+                NODE_ENV: 'development'
+            }
+        };
+        // This is a workaround for the "Uncaught ReferenceError: __dirname is not defined" error
+        // that occurs when using Vite with React.
+    </script>
+</body>
+
+</html>
