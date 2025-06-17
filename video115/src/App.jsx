@@ -17,8 +17,7 @@ function App() {
                 {path: "/services", element: <SERVICES />},
                 {path: "/about", element: <ABOUT />},
                 {path: "/contact", element: <CONTACTS />},
-                {path: "/user/:username", element: <USER />},
-
+                {path: "/user/:username", element: <USER />}
             ]
         }
     ])
