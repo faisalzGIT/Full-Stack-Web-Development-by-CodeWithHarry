@@ -2,7 +2,6 @@ import { useState } from "react"
 import Button from "./components/button.jsx"
 import UserName from "./components/username.jsx"
 import { counterContext } from "./contexts/context.js"
-import { useContext } from "react"      
 
 
 function App() {

@@ -13,14 +13,16 @@ function App() {
         })
     }
   const onSubmit = async (data) => {
-    await delay(2000); // Simulate a network request
-    console.log(data);
-    if(data.username === "Admin"){
-        setError("myForm", { message:"Username Invalid"});
-    }
-    if(data.username === "Rohan"){
-        setError("blocked", { message:"Username already exists"});
-    }
+    // await delay(2000); // Simulate a network request
+    let r = await fetch("http://localhost:3000", {method: 'POST', body: JSON.stringify(data), headers: {'Content-Type': 'application/json'}});
+    let res = await r.text();
+    console.log(data, res);
+    // if(data.username === "Admin"){
+    //     setError("myForm", { message:"Username Invalid"});
+    // }
+    // if(data.username === "Rohan"){
+    //     setError("blocked", { message:"Username already exists"});
+    // }
   }
 
   return (
