@@ -1,0 +1,18 @@
+🔹 Core Operations
+
+1. support@tpfaid.org – For general public support and inquiries.
+2. admin@tpfaid.org – For official internal communication and administrative use.
+3. info@tpfaid.org – For formal external communications and general info requests.
+
+🔹 Volunteer & Donation
+
+4. volunteers@tpfaid.org – To manage all volunteer-related queries and onboarding.
+5. donate@tpfaid.org – For donation inquiries, receipts, and donor support.
+6. zakat@tpfaid.org – Specifically for Zakat-related questions and processing.
+
+🔹 Special Roles/Departments
+
+7. tech@tpfaid.org – For technical support, website, forms, and email automation.
+8. events@tpfaid.org – To coordinate and announce events, workshops, or drives.
+9. media@tpfaid.org – For social media, design team, and public relations.
+10. legal@tpfaid.org – A personal/official ID for you as team lead or developer.
