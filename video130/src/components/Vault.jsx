@@ -21,35 +21,52 @@ const Vault = () => {
 
     const [passwordsArray, setPasswordsArray] = useState([]);
 
+    const getPasswords = async () => {
+        let req = await fetch("http://localhost:3000");
+        const passwords = await req.json();    
+        setPasswordsArray(passwords)
+        console.log(passwords);
+        
+    }
+    
+
     //Load passwords from localStorage on component mount
     useEffect(()=>{
-        const passwords = localStorage.getItem("passwords");
-        if(passwords){
-            setPasswordsArray(JSON.parse(passwords))
-        }
+        getPasswords();
+        
     },[])
 
-    const savePassword = () => {
+    const savePassword = async () => {
         const newErrors = {};
 
-        if(!formData.fullUrl.trim()){
-            newErrors.fullUrl = "Website URL is required.";
-        }
-        if(!formData.userName.trim()){
-            newErrors.userName = "Username is required.";
-        }
-        if(!formData.password.trim()){
-            newErrors.password = "Password is required.";
-        }
 
-        if(Object.keys(newErrors).length > 0){
-            setErrors(newErrors);
-            return;
-        }
+            if(!formData.fullUrl.trim()){
+                newErrors.fullUrl = "Website URL is required.";
+            }
+            if(!formData.userName.trim()){
+                newErrors.userName = "Username is required.";
+            }
+            if(!formData.password.trim()){
+                newErrors.password = "Password is required.";
+            }
+            
+            if(Object.keys(newErrors).length > 0){
+                setErrors(newErrors);
+                return;
+            }
+        
 
         setPasswordsArray([...passwordsArray, {...formData, id: uuidv4()}]);
-        localStorage.setItem("passwords", JSON.stringify([...passwordsArray, {...formData, id: uuidv4()}]));
-        console.log([...passwordsArray, formData]);    
+        let res = await fetch("http://localhost:3000", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({...formData, id: uuidv4()})
+        });
+
+        // localStorage.setItem("passwords", JSON.stringify([...passwordsArray, {...formData, id: uuidv4()}]));
+        // console.log([...passwordsArray, formData]);    
         setFormData({
             fullUrl: "",
             userName: "",
@@ -58,20 +75,35 @@ const Vault = () => {
     }
 
     //Edit Credential Function
-    const editCred = (id) =>{
+    const editCred = async (id) =>{
         console.log("Edit Credential with ID:", id);
         setFormData(passwordsArray.filter(item => item.id === id)[0]);
         setPasswordsArray(passwordsArray.filter(item => item.id !== id));
+        let res = await fetch("http://localhost:3000", {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({id})
+        });
     }
 
     //Delete Credential Function
-    const deleteCred = (id) =>{
+    const deleteCred = async (id) =>{
         let confirmation = confirm("Are you sure you want to delete this credential?");
         if(!confirmation) return;
 
-        console.log("Delete Credential with ID:", id);
+        // console.log("Delete Credential with ID:", id);
         setPasswordsArray(passwordsArray.filter(item => item.id !== id));
-        localStorage.setItem("passwords", JSON.stringify(passwordsArray.filter(item => item.id !== id)));
+        // localStorage.setItem("passwords", JSON.stringify(passwordsArray.filter(item => item.id !== id)));
+
+        let res = await fetch("http://localhost:3000", {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({id})
+        });
     }
 
     //Password show Functioning
@@ -252,8 +284,8 @@ const Vault = () => {
 
                 <div className="TheListOfCreds flex flex-col gap-3 overflow-scroll overflow-x-hidden h-[60vh]">
                     {passwordsArray.map((item, index)=>{
-                        return <>
-                            <div key={item.id} className="singleCred p-4 border border-green-800 rounded-2xl shadow bg-white flex justify-between items-center relative">
+                        return (
+                            <div key={index} className="singleCred p-4 border border-green-800 rounded-2xl shadow bg-white flex justify-between items-center relative">
                                 <div className="flex flex-col gap-3">
                                     <p className="font-semibold text-gray-800 flex items-center gap-2"><FaLink onClick={() => copyText(item.fullUrl)}  className="size-5"/>
                                       <a href={item.fullUrl} target="_blank" className="flex items-center gap-2">{item.fullUrl}</a>
@@ -266,7 +298,7 @@ const Vault = () => {
                                     <button onClick={()=>{deleteCred(item.id)}} className="deleteBtn px-1 py-1 text-sm bg-red-600 hover:bg-red-700 text-white rounded"><MdDeleteOutline className="size-5 "/></button>
                                 </div>
                             </div>
-                        </>
+                        )
                     })}
                 </div> 
                 }   
