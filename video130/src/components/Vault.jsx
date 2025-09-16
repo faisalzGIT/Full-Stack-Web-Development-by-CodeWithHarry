@@ -40,7 +40,7 @@ const Vault = () => {
     const savePassword = async () => {
         const newErrors = {};
 
-
+            
             if(!formData.fullUrl.trim()){
                 newErrors.fullUrl = "Website URL is required.";
             }
@@ -261,8 +261,8 @@ const Vault = () => {
                     Enter Password
                   </label>
 
-                    {showPassword ? <FaEye onClick={eyeClick} className={`text-xl text-gray-700 absolute right-2 top-[12px] cursor-pointer ${formData.password ? "flex" : "hidden"} md:hidden`} />
-                    : <GoEyeClosed onClick={eyeClick} className={`text-xl text-gray-700 absolute right-2 top-[12px] cursor-pointer ${formData.password ? "flex" : "hidden"} md:hidden`}/>}
+                    {showPassword ? <FaEye onClick={eyeClick} className={`text-xl text-gray-700 absolute right-2 top-[12px] cursor-pointer ${formData.password ? "flex" : "hidden"} `} />
+                    : <GoEyeClosed onClick={eyeClick} className={`text-xl text-gray-700 absolute right-2 top-[12px] cursor-pointer ${formData.password ? "flex" : "hidden"}`}/>}
 
                   {errors.password && (
                     <p className="mt-1 text-sm text-red-600">
