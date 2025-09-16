@@ -30,12 +30,13 @@ const Vault = () => {
     }
     
 
-    //Load passwords from localStorage on component mount
+    //Load passwords from MongoDB Database on component mount
     useEffect(()=>{
         getPasswords();
         
     },[])
 
+    //Save Password Function
     const savePassword = async () => {
         const newErrors = {};
 
@@ -65,8 +66,6 @@ const Vault = () => {
             body: JSON.stringify({...formData, id: uuidv4()})
         });
 
-        // localStorage.setItem("passwords", JSON.stringify([...passwordsArray, {...formData, id: uuidv4()}]));
-        // console.log([...passwordsArray, formData]);    
         setFormData({
             fullUrl: "",
             userName: "",
@@ -93,9 +92,7 @@ const Vault = () => {
         let confirmation = confirm("Are you sure you want to delete this credential?");
         if(!confirmation) return;
 
-        // console.log("Delete Credential with ID:", id);
         setPasswordsArray(passwordsArray.filter(item => item.id !== id));
-        // localStorage.setItem("passwords", JSON.stringify(passwordsArray.filter(item => item.id !== id)));
 
         let res = await fetch("http://localhost:3000", {
             method: "DELETE",
@@ -157,15 +154,15 @@ const Vault = () => {
         <div className="absolute inset-0 -z-10  h-[89vh]  w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_60%,#15803d_100%)]"></div>
 
         {/* The Vault */}
-        <div className="relative z-10 h-[91vh] flex flex-col items-center top-9">
-          <div className="cont h-[75vh] p-5 pt-4 mx-auto bg-[#FDFAF6] max-w-7xl w-full rounded-lg shadow-[1px_1px_20px_15px_rgba(0,0,0,0.1)] flex flex-col md:flex-row ">
-            <div className="CONT1 h-[70vh] text-white flex flex-col justify-center p-5 gap-5 max-w-3xl w-full">
+        <div className="relative z-10 h-[89vh] flex flex-col items-center top-0 md:top-9">
+          <div className="cont h-[89vh] md:h-[75vh] top-1 p-5 pt-0 md:pt-4 mx-auto bg-white md:bg-[#FDFAF6] max-w-7xl w-full rounded-lg shadow-[1px_1px_20px_15px_rgba(0,0,0,0.1)] flex flex-col md:flex-row ">
+            <div className="CONT1 h-[70vh]  text-white flex flex-col justify-start md:justify-center p-0 md:border-0 border-t border-slate-900 md:p-5 gap-5 max-w-3xl w-full">
               {/*WebApp Intro */}
               <div className="app-intro">
-                <h1 className="mb-5 text-center text-4xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-slate-900">
+                <h1 className="mb-5 md:flex justify-center hidden text-center text-4xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-slate-900">
                   Password Vault
                 </h1>
-                <p className="mx-auto text-center mb-8 max-w-2xl text-sm text-slate-700">
+                <p className="mx-auto flex text-center mt-4 md:mt-0 mb-0 md:mb-8 max-w-2xl text-sm text-slate-700">
                   Manage your passwords securely and efficiently with our
                   intuitive Password Manager. Store, organize, and access your
                   passwords with ease.
@@ -188,7 +185,7 @@ const Vault = () => {
 
                 <label
                   htmlFor="fullUrl"
-                  className={`bg-[#FDFAF6] absolute left-1 transition-all duration-300 text-[15px] transform        scale-100      px-1 py-0 pt-[1px]  peer-focus:text-[13px] peer-focus:text-green-800 peer-focus:-top-3    peer-focus:opacity-100       peer-focus:font-semibold                          
+                  className={`md:bg-[#FDFAF6] bg-white  absolute left-1 transition-all duration-300 text-[15px] transform        scale-100      px-1 py-0 pt-[1px]  peer-focus:text-[13px] peer-focus:text-green-800 peer-focus:-top-3    peer-focus:opacity-100       peer-focus:font-semibold                          
                                             ${
                                               formData.fullUrl
                                                 ? "-top-3 text-[13px] font-semibold  text-green-700"
@@ -220,7 +217,7 @@ const Vault = () => {
 
                   <label
                     htmlFor="userName"
-                    className={`bg-[#FDFAF6]  absolute left-1  transition-all duration-300 text-[15px]   transform        scale-100      px-1 py-0 pt-[1px] peer-focus:text-[13px] peer-focus:text-green-800 peer-focus:-top-3     peer-focus:opacity-100       peer-focus:font-semibold                          
+                    className={`md:bg-[#FDFAF6] bg-white  absolute left-1  transition-all duration-300 text-[15px]   transform        scale-100      px-1 py-0 pt-[1px] peer-focus:text-[13px] peer-focus:text-green-800 peer-focus:-top-3     peer-focus:opacity-100       peer-focus:font-semibold                          
                                     ${
                                       formData.userName
                                         ? "-top-3 text-[13px] font-semibold  text-green-700"
@@ -253,7 +250,7 @@ const Vault = () => {
 
                   <label
                     htmlFor="password"
-                    className={`bg-[#FDFAF6]  absolute left-1 transition-all duration-300 text-[15px]   transform        scale-100      px-1 py-0 pt-[1px] peer-focus:text-[13px] peer-focus:text-green-800 peer-focus:-top-3     peer-focus:opacity-100       peer-focus:font-semibold                          
+                    className={`md:bg-[#FDFAF6] bg-white  absolute left-1 transition-all duration-300 text-[15px]   transform        scale-100      px-1 py-0 pt-[1px] peer-focus:text-[13px] peer-focus:text-green-800 peer-focus:-top-3     peer-focus:opacity-100       peer-focus:font-semibold                          
                                     ${
                                       formData.password
                                         ? "-top-3 text-[13px] font-semibold  text-green-700"
@@ -264,8 +261,8 @@ const Vault = () => {
                     Enter Password
                   </label>
 
-                    {showPassword ? <FaEye onClick={eyeClick} className="text-xl text-gray-700 absolute right-2 top-[12px] cursor-pointer"/> 
-                    : <GoEyeClosed onClick={eyeClick} className="text-xl text-gray-700 absolute right-2 top-[12px] cursor-pointer"/>}
+                    {showPassword ? <FaEye onClick={eyeClick} className={`text-xl text-gray-700 absolute right-2 top-[12px] cursor-pointer ${formData.password ? "flex" : "hidden"} md:hidden`} />
+                    : <GoEyeClosed onClick={eyeClick} className={`text-xl text-gray-700 absolute right-2 top-[12px] cursor-pointer ${formData.password ? "flex" : "hidden"} md:hidden`}/>}
 
                   {errors.password && (
                     <p className="mt-1 text-sm text-red-600">
@@ -273,19 +270,22 @@ const Vault = () => {
                     </p>
                   )}
                 </div>
-                <button onClick={savePassword} className="savePasswordBtn h-10 w-60 text-xl bg-green-700 hover:bg-green-800 rounded text-white font-semibold flex  justify-center items-center gap-2">
+                <button onClick={savePassword} className="savePasswordBtn h-10 w-60 text-xl bg-green-700 hover:bg-green-800 rounded text-white font-semibold hidden md:flex justify-center items-center gap-2">
                   <img className="size-6" src={lockIcon} alt="" /> Save
                 </button>
               </div>
+              <button onClick={savePassword} className="savePasswordBtn h-10 w-full text-xl bg-green-700 hover:bg-green-800 rounded text-white font-semibold md:hidden flex justify-center items-center gap-2">
+                  <img className="size-6" src={lockIcon} alt="" /> Save
+                </button>
             </div>
-            <div className="CONT2 h-[65vh] pl-8 mt-6 mx-4 w-full border-l-1 border-gray-400  px-3">
+            <div className="CONT2 h-[65vh] pl-0 md:px-3 md:pl-8 md:mt-6 md:mx-4 w-full md:border-l-1 border-gray-400">
             
-                {passwordsArray.length === 0 ? <p className="text-center text-2xl text-gray-600 h-full p-30 flex justify-center items-center">No credentials saved yet.</p> :
+                {passwordsArray.length === 0 ? <p className="text-center text-lg md:text-2xl text-gray-600 h-full p-1 md:p-30 flex justify-center md:items-center items-start">No credentials saved yet.</p> :
 
-                <div className="TheListOfCreds flex flex-col gap-3 overflow-scroll overflow-x-hidden h-[60vh]">
+                <div className="TheListOfCreds flex flex-col gap-3 overflow-scroll overflow-x-hidden h-[65vh]">
                     {passwordsArray.map((item, index)=>{
                         return (
-                            <div key={index} className="singleCred p-4 border border-green-800 rounded-2xl shadow bg-white flex justify-between items-center relative">
+                            <div key={index} className="singleCred p-4 mt-4 md:mt-0 md:mr-3 border border-green-800 rounded-2xl shadow bg-white flex justify-between items-center relative">
                                 <div className="flex flex-col gap-3">
                                     <p className="font-semibold text-gray-800 flex items-center gap-2"><FaLink onClick={() => copyText(item.fullUrl)}  className="size-5"/>
                                       <a href={item.fullUrl} target="_blank" className="flex items-center gap-2">{item.fullUrl}</a>

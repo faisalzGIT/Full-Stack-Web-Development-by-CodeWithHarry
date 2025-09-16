@@ -1,5 +1,4 @@
-import React from 'react'
-
+import { NavLink} from 'react-router-dom'
 
 const Home = () => {
   return <>
@@ -14,17 +13,17 @@ const Home = () => {
           <div className="md:max-w-6xl max-w-3xl text-center">
             <h1 className="mb-8 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl text-slate-900">
               Welcome to
-              <span className="text-purple-900"> Password Vault</span>
+              <span className="text-green-900"> Password Vault</span>
             </h1>
-            <p className="mx-auto mb-8 max-w-2xl text-lg text-slate-700">
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-slate-800">
               Password Vault helps you securely store, manage, and access all your passwords in one place — safe, simple, and convenient.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="rounded-lg px-6 py-3 font-medium bg-sky-900 text-white hover:bg-sky-800">
-                Get Started
+              <button className="rounded-lg px-6 py-3 font-medium bg-slate-900 text-white hover:bg-slate-800">
+                    <NavLink to="/vault">Get Started</NavLink>
               </button>
               <button className="rounded-lg border px-6 py-3 font-medium border-slate-200 bg-white text-slate-900 hover:bg-slate-50">
-                Learn More
+                <NavLink to="/about">Learn More</NavLink>
               </button>
             </div>
           </div>
