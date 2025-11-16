@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BitLinks - URL Shortener — Next.js + MongoDB
 
-## Getting Started
+This repository contains a small URL shortener web application named BitLinks, built with Next.js (App Router) and MongoDB. It was created as part of a CodeWithHarry tutorial and demonstrates a minimal, production-ready structure for building server-rendered pages, API routes, and database-backed features.
 
-First, run the development server:
+**Tech stack:** `Next.js` (App Router), `React`, `Tailwind CSS` (configuration present), `mongodb` (official driver)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**Useful for:** learning Next.js 13+ App Router, creating simple APIs with server functions, and working with MongoDB from server-side code.
+
+**Live demo:** Deployed to Vercel — `https://<your-vercel-deployment>.vercel.app` (replace with your actual deployment URL).
+
+**Project layout (important files):**
+
+- `app/` — App Router pages and routes (`page.js`, dynamic `[shorturl]/page.js`, and API under `app/api`).
+- `components/` — React UI components (e.g., `Navbar.js`).
+- `lib/mongodb.js` — MongoDB client helper (reads `MONGODB_URI` from environment).
+- `shorten/` — UI for creating shortened URLs.
+- `public/` — Static assets.
+
+**Key dependencies (see `package.json`):**
+
+- `next` 16.x, `react` 19.x, `mongodb` 7.x
+
+## Quick Start
+
+Prerequisites:
+
+- Node.js (recommended v18+ or latest LTS)
+- A MongoDB database (Atlas or self-hosted)
+
+Install dependencies:
+
+```powershell
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create a `.env.local` file in the project root with at least the following variable:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```text
+MONGODB_URI=your_mongodb_connection_string
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Recommended (optional):
 
-## Learn More
+```text
+# Base URL used by any client-side redirects or displays. Example:
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+Run the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```powershell
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open `http://localhost:3000` in your browser.
 
-## Deploy on Vercel
+## Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev` — Starts Next.js in development mode.
+- `npm run build` — Builds the app for production.
+- `npm run start` — Starts the production server (after `build`).
+- `npm run lint` — Runs ESLint.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Environment Variables
+
+- `MONGODB_URI` (required): MongoDB connection string used by `lib/mongodb.js`.
+- `NEXT_PUBLIC_BASE_URL` (optional): Public base URL for canonical links or redirects.
+
+Keep secrets out of source control. Use `.env.local` for local development and your host's secret manager for production (Vercel Environment Variables, etc.).
+
+## How It Works (high level)
+
+- The app exposes a small UI that accepts a long URL and creates a short token.
+- Server-side API (under `app/api/generate`) stores the mapping in MongoDB via `lib/mongodb.js`.
+- The dynamic route `[shorturl]` reads the token and redirects to the original URL.
+
+## Deploying
+
+Deploy to Vercel for the simplest experience. Configure `MONGODB_URI` in the project settings (Environment Variables) on Vercel and push the repository.
+
+Other hosts that support Node/Next.js will also work — ensure environment variables are set and the Node version matches your needs.
+
+## License
+
+This repository is provided as-is for learning. Add a license file if you plan to open-source it publicly.
+
+---
