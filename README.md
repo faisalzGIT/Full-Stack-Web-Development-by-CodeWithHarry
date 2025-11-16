@@ -1,4 +1,3 @@
-Here is a **shorter, cleaner, more aesthetic README.md** for your Sigma Web Dev Course repo — perfect for GitHub, visually appealing, and straight to the point:
 
 ---
 
@@ -92,8 +91,3 @@ Excited to continue improving, building, and moving toward new goals, Insha’Al
 
 ---
 
-If you want, I can also:
-✨ Add badges
-✨ Add a banner/header image
-✨ Add a more minimal or more stylish version
-Just tell me your style!
